@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><Page Title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <script src="../assets/javascripts/libs/Modernizr/modernizr.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Oswald:300,400,700" rel="stylesheet">
+    <link href="../assets/javascripts/libs/Swiper/css/swiper.min.css" type="text/css" media="screen" />
+    <link href="../assets/stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="../assets/javascripts/libs/Chartjs/dist/Chart.bundle.min.js"></script>
+    <script src="../assets/javascripts/libs/Chartjs/dist/Chart.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
+</head>
+<body class="page signature-programme sp-1 impact landing-page">
+<header class="navigation primary-navigation" role="banner" id="primaryMenu">
+    <div class="navigation-wrapper">
+        <div class="container padding">
+            <div class="logos active">
+                <ul>
+                    <li><img src="../assets/images/logos/undp.svg" /></li>
+                    <li><img src="../assets/images/logos/cca.svg" /></li>
+                </ul>
+            </div>
+            <a href="#" class="navigation-menu-button" id="js-mobile-menu"><span class="fa fa-bars fa-2x"></span></a>
+        </div>
+        <nav role="navigation">
+            <ul id="js-navigation-menu" class="navigation-menu show">
+                <li class="nav-link"><a href="/">Home</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">About</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Issues & Approaches</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Knowledge Center</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="hero page-banner" style="background-image: ">
+    <!-- Hero Background Image -->
+    <div class="container">
+        <h1 class="site-title large second flipInX animated">Signature Programme #1</h1>
+    </div>
+</div>
+<div class="container content">
+    <div class="block grid-12 block-data-counter">
+        <div class="grid-4-cols small">
+            <p class="value"><span class="count-num-1">125</span></p>
+            <p class="label">projects</p>
+        </div>
+        <div class="grid-4-cols small">
+            <p class="value">$<span class="count-num">664</span> Million</p>
+            <p class="label">Portfolio Budget</p>
+        </div>
+        <div class="grid-4-cols small">
+            <p class="value"><span class="count-num-1">72</span></p>
+            <p class="label">countries</p>
+        </div>
+    </div>
+    <div class="block padding light">
+        <h1>Signature Programme #1</h1>
+        <p class="highlight">Assisting governments to develop and strengthen policies, institutions, capacities and knowledge for integrated green, low-emission and climate resilient development, including financing mechanisms.</p>
+    </div>
+    <div class="block padding dark">
+        <h3>Regional Distribution of projects under Signature Programme #1</h3>
+        <div class="grid grid-12">
+            <div class="grid-4-cols small">
+                <h5>125 Projects</h5>
+                <canvas id="sp1Regions"></canvas></div>
+            <div class="grid-8-cols small">
+                <div id='map' style='width: 100%; height: 50vh;'></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidW5kcC1jY2EiLCJhIjoiY2lqdzNnZTRjMGhrYnRxbTVqdXN1bG1jciJ9.XYxJ9kfNn5Dd_CNVytKTjw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/undp-cca/ciszocew1000w2yoau7fmirib',
+            dragPan: true,
+            scrollZoom: false,
+            zoom: 1,
+            center: [40, 0],
+        });
+    </script>
+
+</div>
+</div>
+
+<script src="../assets/javascripts/libs/jQuery/jquery.min.js"></script>
+<script src="../assets/javascripts/libs/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+<script src="../assets/javascripts/behaviours/scrollingEffects.js"></script>
+<script src="../assets/javascripts/behaviours/animationControl.js"></script>
+<script src="../assets/javascripts/behaviours/blockSpacing.js"></script>
+<script src="../assets/javascripts/behaviours/numberCounter.js"></script>
+<script src="../assets/javascripts/components/menu.js"></script>
+<script src="../assets/data/sp1_regions.js"></script>
+<script src="//localhost:35729/livereload.js"></script> <!-- Development only -->
+</body>
+</html>
