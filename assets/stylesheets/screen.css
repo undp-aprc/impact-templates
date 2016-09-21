@@ -7228,51 +7228,55 @@ canvas {
   text-align: center;
   position: relative;
   background-color: #e6e7e8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   box-sizing: border-box;
   border-radius: 5px;
   transition: all 0.2s linear;
-  animation-duration: 2s;
+  animation-duration: 1s;
   background-size: auto;
 }
-/* line 23, ../../../src/sass/scaffold/_gender.scss */
+/* line 24, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite:hover {
   background-color: #bfe7f4;
   background-size: 8em !important;
 }
-/* line 27, ../../../src/sass/scaffold/_gender.scss */
+/* line 28, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-participation {
   background-image: url("/assets/images/themes/gender/sprite-1.svg");
 }
-/* line 30, ../../../src/sass/scaffold/_gender.scss */
+/* line 31, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-risk {
   background-image: url("/assets/images/themes/gender/sprite-2.svg");
 }
-/* line 33, ../../../src/sass/scaffold/_gender.scss */
+/* line 34, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-water {
   background-image: url("/assets/images/themes/gender/sprite-3.svg");
 }
-/* line 36, ../../../src/sass/scaffold/_gender.scss */
+/* line 37, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-time {
   background-image: url("/assets/images/themes/gender/sprite-4.svg");
 }
-/* line 39, ../../../src/sass/scaffold/_gender.scss */
+/* line 40, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-community {
   background-image: url("/assets/images/themes/gender/sprite-5.svg");
 }
-/* line 42, ../../../src/sass/scaffold/_gender.scss */
+/* line 43, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-food-security {
   background-image: url("/assets/images/themes/gender/sprite-6.svg");
 }
-/* line 45, ../../../src/sass/scaffold/_gender.scss */
+/* line 46, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-resources {
   background-image: url("/assets/images/themes/gender/sprite-7.svg");
 }
-/* line 48, ../../../src/sass/scaffold/_gender.scss */
+/* line 49, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .sprite#gender-institutions {
   background-image: url("/assets/images/themes/gender/sprite-8.svg");
 }
-/* line 53, ../../../src/sass/scaffold/_gender.scss */
+/* line 54, ../../../src/sass/scaffold/_gender.scss */
 .landing-page.gender .scene .caption {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   color: black;
@@ -7286,20 +7290,21 @@ canvas {
   color: #4b4b4b;
 }
 @media screen and (min-width: 1024px) {
-  /* line 68, ../../../src/sass/scaffold/_gender.scss */
+  /* line 71, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .container.content {
     padding: 0;
   }
-  /* line 70, ../../../src/sass/scaffold/_gender.scss */
+  /* line 73, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .container.content h3 {
     display: none;
   }
-  /* line 74, ../../../src/sass/scaffold/_gender.scss */
+  /* line 77, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .block.behind.fixPosition {
     position: relative;
   }
-  /* line 77, ../../../src/sass/scaffold/_gender.scss */
+  /* line 80, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene {
+    font-size: 1.5rem;
     height: 100vh;
     background: url("/assets/images/themes/gender/bg.svg") no-repeat fixed 0% 0%;
     background-color: #deecf8;
@@ -7307,7 +7312,7 @@ canvas {
     position: relative;
     z-index: 0;
   }
-  /* line 84, ../../../src/sass/scaffold/_gender.scss */
+  /* line 88, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite {
     position: fixed;
     width: 10em;
@@ -7318,56 +7323,56 @@ canvas {
     background-size: auto !important;
     background-color: transparent;
   }
-  /* line 93, ../../../src/sass/scaffold/_gender.scss */
+  /* line 97, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite:hover {
     background-size: auto !important;
     background-color: transparent;
   }
-  /* line 97, ../../../src/sass/scaffold/_gender.scss */
+  /* line 101, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-participation {
     bottom: 3%;
     right: 20%;
   }
-  /* line 101, ../../../src/sass/scaffold/_gender.scss */
+  /* line 105, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-risk {
     bottom: 4%;
     right: 40%;
   }
-  /* line 105, ../../../src/sass/scaffold/_gender.scss */
+  /* line 109, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-water {
     bottom: 15%;
     left: 20%;
   }
-  /* line 109, ../../../src/sass/scaffold/_gender.scss */
+  /* line 113, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-time {
     bottom: 4%;
     left: 2%;
   }
-  /* line 113, ../../../src/sass/scaffold/_gender.scss */
+  /* line 117, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-community {
     top: 30%;
     left: 5%;
   }
-  /* line 117, ../../../src/sass/scaffold/_gender.scss */
+  /* line 121, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-food-security {
     top: 40%;
     left: 40%;
   }
-  /* line 121, ../../../src/sass/scaffold/_gender.scss */
+  /* line 125, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-resources {
     top: 25%;
     right: 10%;
   }
-  /* line 125, ../../../src/sass/scaffold/_gender.scss */
+  /* line 129, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite#gender-institutions {
     top: 55%;
     right: 5%;
   }
-  /* line 129, ../../../src/sass/scaffold/_gender.scss */
+  /* line 133, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite.active {
     z-index: 1000;
   }
-  /* line 134, ../../../src/sass/scaffold/_gender.scss */
+  /* line 138, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite .caption {
     display: none;
     bottom: -20%;
@@ -7380,7 +7385,7 @@ canvas {
     padding: 0.5em;
     z-index: 1000;
   }
-  /* line 146, ../../../src/sass/scaffold/_gender.scss */
+  /* line 150, ../../../src/sass/scaffold/_gender.scss */
   .landing-page.gender .scene .sprite.active .caption {
     text-indent: 0;
     display: block;

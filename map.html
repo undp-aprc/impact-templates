@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><Page Title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <script src="assets/javascripts/libs/Modernizr/modernizr.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Oswald:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/screen.css" media="screen" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
+    <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
+</head>
+<body class="landing-page impact front">
+<style>
+    #menu {
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        right: 10px;
+        border-radius: 3px;
+        border: 1px solid rgba(0,0,0,0.4);
+        background-color: rgba(50,50,50,0.4);
+    }
+
+    #menu a {
+        font-size: 1em;
+        color: #404040;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        text-align: center;
+    }
+
+    #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+    }
+
+    #menu a.active#btn-sp1 {
+        background-color: #fa8024;
+        color: #ffffff;
+    }
+    #menu a.active#btn-sp2 {
+        background-color: #bc2137;
+        color: #ffffff;
+    }
+    #menu a.active#btn-sp3 {
+        background-color: #86c1e6;
+        color: #ffffff;
+    }
+    #menu a.active#btn-sp4 {
+        background-color: #1b7e12;
+        color: #ffffff;
+    }
+    #menu a.active#btn-sp5 {
+        background-color: #1085fc;
+        color: #ffffff;
+    }
+    #menu a.active#btn-sp6 {
+        background-color: #7e247f;
+        color: #ffffff;
+    }
+
+
+
+    #menu a.active:hover {
+        background: #3074a4;
+    }
+</style>
+
+<nav id="menu"></nav>
+<div id="map" style="height:30em;"></div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidW5kcC1jY2EiLCJhIjoiY2lqdzNnZTRjMGhrYnRxbTVqdXN1bG1jciJ9.XYxJ9kfNn5Dd_CNVytKTjw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/undp-cca/citcfau7b000v2jp2r1jj2me9',
+        zoom: 1,
+        center: [0, 0]
+    });
+
+    map.on('load', function() {
+        var toggleableLayerIds = [ 'sp1', 'sp2', 'sp3', 'sp4', 'sp5', 'sp6' ];
+        var labels = ['#1', '#2', '#3', '#4', '#5', '#6'];
+
+
+        for (var i = 0; i < toggleableLayerIds.length; i++) {
+            var id = toggleableLayerIds[i];
+            var label = labels[i];
+
+            var link = document.createElement('a');
+            link.href = '#';
+            link.className = 'toggle-btn';
+            link.textContent = label;
+            link.dataset.id = id;
+            link.id = 'btn-'+id;
+
+            var layers = document.getElementById('menu');
+            layers.appendChild(link);
+            map.setLayoutProperty(id, 'visibility', 'none'); // Set all layers to invisible
+        }
+
+        // But start by showing SP1
+        map.setLayoutProperty('sp1', 'visibility', 'visible');
+        $('#btn-sp1').toggleClass('active');
+
+        $('.toggle-btn').on('click', function(e) {
+            var clickedLayer = this.dataset.id;
+            e.preventDefault();
+            e.stopPropagation();
+
+            var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+            if (visibility === 'none') { // This block toggles active state of layers
+                // Find any other items that are active and deactivate them before making the clicked layer active
+                var activeLayers = $(this).parent('#menu').children('.active');
+                activeLayers.each(function(i){
+                    var layerId = activeLayers[i].dataset.id;
+                    map.setLayoutProperty(layerId, 'visibility', 'none');
+                    $('#btn-'+layerId).removeClass('active');
+                });
+                // All deactive now, so make the clicked layer active
+                map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+                $(this).addClass('active');
+            }
+        });
+    });
+
+
+
+    /*link.onclick = function (e) {
+        var clickedLayer = this.dataset.id;
+        e.preventDefault();
+        e.stopPropagation();
+
+        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+
+        if (visibility === 'visible') {
+            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+            this.className = '';
+        } else {
+            this.className = 'active';
+            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+        }
+    };*/
+
+</script>
+</body>
+</html>

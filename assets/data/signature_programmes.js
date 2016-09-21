@@ -5,13 +5,13 @@
             container: 'signature-programme-map',
             style: 'mapbox://styles/mapbox/dark-v9',
             zoom: 1,
-            center: [0, 0]
+            center: [0, 0],
         });
 
         map.on('load', function() {
             map.addSource('sp1', {
                 type: 'vector',
-                url: 'mapbox://undp-cca.de4glgt3'
+                url: 'mapbox://styles/undp-cca/citc8z0iz00032hoggnbbubwj'
             });
 
             map.addLayer({
