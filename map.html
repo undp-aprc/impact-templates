@@ -8,10 +8,18 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Oswald:300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/screen.css" media="screen" />
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
     <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
 </head>
 <body class="landing-page impact front">
 <style>
+    body {
+        background-color: #191a1a;
+    }
+    #map {
+        max-width:1024px;
+        margin: 0 auto;
+    }
     #menu {
         position: absolute;
         z-index: 1;
@@ -22,7 +30,7 @@
         background-color: rgba(50,50,50,0.4);
     }
 
-    #menu a {
+    #menu a.toggle-btn {
         font-size: 1em;
         color: #404040;
         display: inline-block;
@@ -64,15 +72,13 @@
         color: #ffffff;
     }
 
-
-
     #menu a.active:hover {
         background: #3074a4;
     }
 </style>
 
-<nav id="menu"></nav>
-<div id="map" style="height:30em;"></div>
+
+<div id="map" style="height:30em;"><nav id="menu"></nav></div>
 
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoidW5kcC1jY2EiLCJhIjoiY2lqdzNnZTRjMGhrYnRxbTVqdXN1bG1jciJ9.XYxJ9kfNn5Dd_CNVytKTjw';
@@ -80,7 +86,10 @@
         container: 'map',
         style: 'mapbox://styles/undp-cca/citcfau7b000v2jp2r1jj2me9',
         zoom: 1,
-        center: [0, 0]
+        minZoom: 1,
+        maxZoom: 3,
+        pitch: 10,
+        center: [30, 0]
     });
 
     map.on('load', function() {
