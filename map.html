@@ -10,76 +10,77 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
     <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
+    <style>
+        body {
+            background-color: #191a1a;
+        }
+        #map {
+            margin: 0 auto;
+        }
+        #menu {
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+            border-radius: 3px;
+            border: 1px solid rgba(0,0,0,0.4);
+            background-color: rgba(50,50,50,0.4);
+        }
+
+        #menu a.toggle-btn {
+            font-size: 1em;
+            color: #404040;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        #menu a:hover {
+            background-color: #f8f8f8;
+            color: #404040;
+        }
+
+        #menu a.active#btn-sp1 {
+            background-color: #fa8024;
+            color: #ffffff;
+        }
+        #menu a.active#btn-sp2 {
+            background-color: #bc2137;
+            color: #ffffff;
+        }
+        #menu a.active#btn-sp3 {
+            background-color: #86c1e6;
+            color: #ffffff;
+        }
+        #menu a.active#btn-sp4 {
+            background-color: #1b7e12;
+            color: #ffffff;
+        }
+        #menu a.active#btn-sp5 {
+            background-color: #1085fc;
+            color: #ffffff;
+        }
+        #menu a.active#btn-sp6 {
+            background-color: #7e247f;
+            color: #ffffff;
+        }
+
+        #menu a.active:hover {
+            background: #3074a4;
+        }
+    </style>
+
 </head>
 <body class="landing-page impact front">
-<style>
-    body {
-        background-color: #191a1a;
-    }
-    #map {
-        max-width:1024px;
-        margin: 0 auto;
-    }
-    #menu {
-        position: absolute;
-        z-index: 1;
-        top: 10px;
-        right: 10px;
-        border-radius: 3px;
-        border: 1px solid rgba(0,0,0,0.4);
-        background-color: rgba(50,50,50,0.4);
-    }
-
-    #menu a.toggle-btn {
-        font-size: 1em;
-        color: #404040;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-        padding: 10px;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(0,0,0,0.25);
-        text-align: center;
-    }
-
-    #menu a:hover {
-        background-color: #f8f8f8;
-        color: #404040;
-    }
-
-    #menu a.active#btn-sp1 {
-        background-color: #fa8024;
-        color: #ffffff;
-    }
-    #menu a.active#btn-sp2 {
-        background-color: #bc2137;
-        color: #ffffff;
-    }
-    #menu a.active#btn-sp3 {
-        background-color: #86c1e6;
-        color: #ffffff;
-    }
-    #menu a.active#btn-sp4 {
-        background-color: #1b7e12;
-        color: #ffffff;
-    }
-    #menu a.active#btn-sp5 {
-        background-color: #1085fc;
-        color: #ffffff;
-    }
-    #menu a.active#btn-sp6 {
-        background-color: #7e247f;
-        color: #ffffff;
-    }
-
-    #menu a.active:hover {
-        background: #3074a4;
-    }
-</style>
-
-
-<div id="map" style="height:30em;"><nav id="menu"></nav></div>
-
+<div class="block">
+    <h1>UNDP Climate Change Adaptation</h1>
+    <h2>Signature Programmes</h2>
+    <div id="map" style="height:60em;"><nav id="menu"></nav></div>
+</div>
 <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoidW5kcC1jY2EiLCJhIjoiY2lqdzNnZTRjMGhrYnRxbTVqdXN1bG1jciJ9.XYxJ9kfNn5Dd_CNVytKTjw';
     var map = new mapboxgl.Map({
@@ -142,20 +143,20 @@
 
 
     /*link.onclick = function (e) {
-        var clickedLayer = this.dataset.id;
-        e.preventDefault();
-        e.stopPropagation();
+     var clickedLayer = this.dataset.id;
+     e.preventDefault();
+     e.stopPropagation();
 
-        var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+     var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
 
-        if (visibility === 'visible') {
-            map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-            this.className = '';
-        } else {
-            this.className = 'active';
-            map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-        }
-    };*/
+     if (visibility === 'visible') {
+     map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+     this.className = '';
+     } else {
+     this.className = 'active';
+     map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+     }
+     };*/
 
 </script>
 </body>
