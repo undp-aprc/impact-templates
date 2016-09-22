@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/screen.css" media="screen" />
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="assets/javascripts/libs/Chartjs/dist/Chart.bundle.js"></script>
+    <script src="assets/javascripts/libs/spin/spin.min.js"></script>
     <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
     <style>
         body {
@@ -23,8 +25,7 @@
             top: 10px;
             right: 10px;
             border-radius: 3px;
-            border: 1px solid rgba(0,0,0,0.4);
-            background-color: rgba(50,50,50,0.4);
+            background-color: rgba(255,255,255,0.4);
         }
 
         #menu a.toggle-btn {
@@ -79,9 +80,74 @@
 <div class="block">
     <h1>UNDP Climate Change Adaptation</h1>
     <h2>Signature Programmes</h2>
-    <div id="map" style="height:60em;"><nav id="menu"></nav></div>
+    <div class="app-container" id="app">
+        <div class="signature-programme container active" id="container-sp1">
+            <h4>1. Supporting Integrated Climate Change Strategies</h4>
+        </div>
+        <div class="signature-programme container" id="container-sp2">
+            <h4>2. Advanced Cross-Sectoral Climate Resilient Livelihoods</h4>
+        </div>
+        <div class="signature-programme container" id="container-sp3">
+            <h4>3. Ecosystem-Based Adaptation</h4>
+        </div>
+        <div class="signature-programme container" id="container-sp4">
+            <h4>4. Fostering Resilience for Food Security</h4>
+        </div>
+        <div class="signature-programme container" id="container-sp5">
+            <h4>5. Climate-resilient Integrated Water and Coastal Management</h4>
+        </div>
+        <div class="signature-programme container" id="container-sp6">
+            <h4>6. Community Resilience Through Integrated Landscape Management</h4>
+        </div>
+        <div id="map" style="height:40em;">
+            <nav id="menu"></nav>
+        </div>
+        <div class="container graph">
+            <h5><span id="numProjects">80</span> Projects</h5>
+            <canvas id="regionsChart" class="graph bar"></canvas>
+        </div>
+    </div>
 </div>
+<script src="assets/data/regionData.js"></script>
 <script>
+    var opts = {
+        lines: 13 // The number of lines to draw
+        , length: 28 // The length of each line
+        , width: 14 // The line thickness
+        , radius: 42 // The radius of the inner circle
+        , scale: 1 // Scales overall size of the spinner
+        , corners: 1 // Corner roundness (0..1)
+        , color: '#000' // #rgb or #rrggbb or array of colors
+        , opacity: 0.25 // Opacity of the lines
+        , rotate: 0 // The rotation offset
+        , direction: 1 // 1: clockwise, -1: counterclockwise
+        , speed: 1 // Rounds per second
+        , trail: 60 // Afterglow percentage
+        , fps: 20 // Frames per second when using setTimeout() as a fallback for CSS
+        , zIndex: 2e9 // The z-index (defaults to 2000000000)
+        , className: 'spinner' // The CSS class to assign to the spinner
+        , top: '50%' // Top position relative to parent
+        , left: '50%' // Left position relative to parent
+        , shadow: false // Whether to render a shadow
+        , hwaccel: false // Whether to use hardware acceleration
+        , position: 'absolute' // Element positioning
+    }
+    var target = document.getElementById('app')
+    var spinner = new Spinner(opts).spin(target);
+</script>
+<script>
+    var updateProjectTotal = function (dataSet) {
+        var data = dataSet[0].data;
+        var sum = data.reduce(add, 0);
+        $('#numProjects').html(sum);
+    }
+
+    function add(a, b) {
+        return a + b;
+    }
+</script>
+<script>
+    updateProjectTotal(RegionData['sp1']);
     mapboxgl.accessToken = 'pk.eyJ1IjoidW5kcC1jY2EiLCJhIjoiY2lqdzNnZTRjMGhrYnRxbTVqdXN1bG1jciJ9.XYxJ9kfNn5Dd_CNVytKTjw';
     var map = new mapboxgl.Map({
         container: 'map',
@@ -94,9 +160,9 @@
     });
 
     map.on('load', function() {
+        spinner.stop();
         var toggleableLayerIds = [ 'sp1', 'sp2', 'sp3', 'sp4', 'sp5', 'sp6' ];
         var labels = ['#1', '#2', '#3', '#4', '#5', '#6'];
-
 
         for (var i = 0; i < toggleableLayerIds.length; i++) {
             var id = toggleableLayerIds[i];
@@ -132,32 +198,22 @@
                     var layerId = activeLayers[i].dataset.id;
                     map.setLayoutProperty(layerId, 'visibility', 'none');
                     $('#btn-'+layerId).removeClass('active');
+                    $('#container-'+layerId).removeClass('active');
                 });
                 // All deactive now, so make the clicked layer active
                 map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
                 $(this).addClass('active');
+                $('#container-'+clickedLayer).addClass('active');
+                // Update the chart
+                SPChart.data.datasets = RegionData[clickedLayer];
+                updateProjectTotal(RegionData[clickedLayer]);
+                SPChart.update();
+                SPChart.render(1000, false);
             }
         });
     });
 
-
-
-    /*link.onclick = function (e) {
-     var clickedLayer = this.dataset.id;
-     e.preventDefault();
-     e.stopPropagation();
-
-     var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-
-     if (visibility === 'visible') {
-     map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-     this.className = '';
-     } else {
-     this.className = 'active';
-     map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-     }
-     };*/
-
 </script>
+
 </body>
 </html>

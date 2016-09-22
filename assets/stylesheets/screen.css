@@ -7928,6 +7928,72 @@ a.button.hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+/* line 1, ../../../src/sass/components/_appContainer.scss */
+.app-container {
+  position: relative;
+  z-index: 2;
+}
+/* line 4, ../../../src/sass/components/_appContainer.scss */
+.app-container h4 {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  text-align: left;
+  padding: 1em 1em;
+  z-index: 1;
+  color: white;
+}
+/* line 14, ../../../src/sass/components/_appContainer.scss */
+.app-container .signature-programme.container {
+  display: none;
+}
+/* line 16, ../../../src/sass/components/_appContainer.scss */
+.app-container .signature-programme.container.active {
+  display: block;
+}
+/* line 20, ../../../src/sass/components/_appContainer.scss */
+.app-container .container.graph {
+  width: 30%;
+  height: 10em;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(100, 100, 100, 0.5);
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #646464;
+}
+/* line 31, ../../../src/sass/components/_appContainer.scss */
+.app-container .container.graph h5 {
+  color: white;
+}
+/* line 35, ../../../src/sass/components/_appContainer.scss */
+.app-container #container-sp1 h4 {
+  background-color: rgba(250, 128, 26, 0.4);
+}
+/* line 38, ../../../src/sass/components/_appContainer.scss */
+.app-container #container-sp2 h4 {
+  background-color: rgba(188, 33, 55, 0.4);
+}
+/* line 41, ../../../src/sass/components/_appContainer.scss */
+.app-container #container-sp3 h4 {
+  background-color: rgba(134, 193, 230, 0.4);
+}
+/* line 44, ../../../src/sass/components/_appContainer.scss */
+.app-container #container-sp4 h4 {
+  background-color: rgba(27, 126, 18, 0.4);
+}
+/* line 47, ../../../src/sass/components/_appContainer.scss */
+.app-container #container-sp5 h4 {
+  background-color: rgba(16, 133, 252, 0.4);
+}
+/* line 50, ../../../src/sass/components/_appContainer.scss */
+.app-container #container-sp6 h4 {
+  background-color: rgba(126, 36, 127, 0.4);
+}
+
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */
 .chart-legend {
   list-style: square;
