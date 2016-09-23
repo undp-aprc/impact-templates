@@ -146,8 +146,7 @@ var RegionData = {
             animation: {
                 easing: 'easeOutElastic',
                 duration: 1000,
-            }
-
+            },
         }
 
         SPChart = new Chart(ctx, {

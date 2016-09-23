@@ -7954,30 +7954,35 @@ a.button.hover {
   border: 1px solid #646464;
 }
 /* line 31, ../../../src/sass/components/_appContainer.scss */
+.app-container .container.graph canvas {
+  max-height: 100%;
+  max-width: 100;
+}
+/* line 35, ../../../src/sass/components/_appContainer.scss */
 .app-container .container.graph h5 {
   color: white;
 }
-/* line 35, ../../../src/sass/components/_appContainer.scss */
+/* line 39, ../../../src/sass/components/_appContainer.scss */
 .app-container #container-sp1 h4 {
   background-color: rgba(250, 128, 26, 0.4);
 }
-/* line 38, ../../../src/sass/components/_appContainer.scss */
+/* line 42, ../../../src/sass/components/_appContainer.scss */
 .app-container #container-sp2 h4 {
   background-color: rgba(188, 33, 55, 0.4);
 }
-/* line 41, ../../../src/sass/components/_appContainer.scss */
+/* line 45, ../../../src/sass/components/_appContainer.scss */
 .app-container #container-sp3 h4 {
   background-color: rgba(134, 193, 230, 0.4);
 }
-/* line 44, ../../../src/sass/components/_appContainer.scss */
+/* line 48, ../../../src/sass/components/_appContainer.scss */
 .app-container #container-sp4 h4 {
   background-color: rgba(27, 126, 18, 0.4);
 }
-/* line 47, ../../../src/sass/components/_appContainer.scss */
+/* line 51, ../../../src/sass/components/_appContainer.scss */
 .app-container #container-sp5 h4 {
   background-color: rgba(16, 133, 252, 0.4);
 }
-/* line 50, ../../../src/sass/components/_appContainer.scss */
+/* line 54, ../../../src/sass/components/_appContainer.scss */
 .app-container #container-sp6 h4 {
   background-color: rgba(126, 36, 127, 0.4);
 }
