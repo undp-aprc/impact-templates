@@ -6975,30 +6975,29 @@ h3 {
 /* line 54, ../../../src/sass/styles/_typography.scss */
 h4 {
   line-height: 1.5em;
-  margin-bottom: 0;
 }
 
-/* line 59, ../../../src/sass/styles/_typography.scss */
+/* line 58, ../../../src/sass/styles/_typography.scss */
 h5, h6 {
   line-height: 1.5em;
   margin-bottom: 0;
 }
 
-/* line 64, ../../../src/sass/styles/_typography.scss */
+/* line 63, ../../../src/sass/styles/_typography.scss */
 p {
   line-height: 1.5em;
   margin-bottom: 1.5em;
 }
 
 /* Font Styles */
-/* line 70, ../../../src/sass/styles/_typography.scss */
+/* line 69, ../../../src/sass/styles/_typography.scss */
 h1, h2 {
   text-transform: uppercase;
   font-weight: 500;
 }
 
 /* Modifiers */
-/* line 76, ../../../src/sass/styles/_typography.scss */
+/* line 75, ../../../src/sass/styles/_typography.scss */
 .highlight {
   font-weight: bold;
 }
@@ -7956,7 +7955,7 @@ a.button.hover {
 /* line 31, ../../../src/sass/components/_appContainer.scss */
 .app-container .container.graph canvas {
   max-height: 100%;
-  max-width: 100;
+  max-width: 100%;
 }
 /* line 35, ../../../src/sass/components/_appContainer.scss */
 .app-container .container.graph h5 {
