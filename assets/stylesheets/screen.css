@@ -6926,91 +6926,79 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-size: 100%;
 }
-@media screen and (min-width: 801px) {
-  /* line 12, ../../../src/sass/styles/_typography.scss */
-  body {
-    font-size: 150%;
-  }
-}
-@media screen and (min-width: 1401px) {
-  /* line 12, ../../../src/sass/styles/_typography.scss */
-  body {
-    font-size: 200%;
-  }
-}
 
 /* Font Sizes */
-/* line 24, ../../../src/sass/styles/_typography.scss */
+/* line 18, ../../../src/sass/styles/_typography.scss */
 h1 {
   font-size: 2.44141em;
 }
 
-/* line 28, ../../../src/sass/styles/_typography.scss */
+/* line 22, ../../../src/sass/styles/_typography.scss */
 h2 {
   font-size: 1.95313em;
 }
 
-/* line 32, ../../../src/sass/styles/_typography.scss */
+/* line 26, ../../../src/sass/styles/_typography.scss */
 h3 {
   font-size: 1.5625em;
 }
 
-/* line 36, ../../../src/sass/styles/_typography.scss */
+/* line 30, ../../../src/sass/styles/_typography.scss */
 h4, h5, h6 {
   font-size: 1em;
 }
 
-/* line 40, ../../../src/sass/styles/_typography.scss */
+/* line 34, ../../../src/sass/styles/_typography.scss */
 p {
   font-size: 1em;
 }
 
 /* Line Heights */
-/* line 45, ../../../src/sass/styles/_typography.scss */
+/* line 39, ../../../src/sass/styles/_typography.scss */
 h1 {
   line-height: 1.2288em;
   margin-bottom: 0.6144em;
 }
 
-/* line 50, ../../../src/sass/styles/_typography.scss */
+/* line 44, ../../../src/sass/styles/_typography.scss */
 h2 {
   line-height: 1.536em;
   margin-bottom: 0.768em;
 }
 
-/* line 55, ../../../src/sass/styles/_typography.scss */
+/* line 49, ../../../src/sass/styles/_typography.scss */
 h3 {
   line-height: 1.92em;
   margin-bottom: 0;
 }
 
-/* line 60, ../../../src/sass/styles/_typography.scss */
+/* line 54, ../../../src/sass/styles/_typography.scss */
 h4 {
   line-height: 1.5em;
   margin-bottom: 0;
 }
 
-/* line 65, ../../../src/sass/styles/_typography.scss */
+/* line 59, ../../../src/sass/styles/_typography.scss */
 h5, h6 {
   line-height: 1.5em;
   margin-bottom: 0;
 }
 
-/* line 70, ../../../src/sass/styles/_typography.scss */
+/* line 64, ../../../src/sass/styles/_typography.scss */
 p {
   line-height: 1.5em;
   margin-bottom: 1.5em;
 }
 
 /* Font Styles */
-/* line 76, ../../../src/sass/styles/_typography.scss */
+/* line 70, ../../../src/sass/styles/_typography.scss */
 h1, h2 {
   text-transform: uppercase;
   font-weight: 500;
 }
 
 /* Modifiers */
-/* line 82, ../../../src/sass/styles/_typography.scss */
+/* line 76, ../../../src/sass/styles/_typography.scss */
 .highlight {
   font-weight: bold;
 }
@@ -7555,7 +7543,7 @@ canvas {
 }
 /* line 41, ../../../src/sass/mixins/_hero.scss */
 .landing-page .hero .site-title.large {
-  font-size: 4.76837em;
+  font-size: 3.05176em;
 }
 /* line 44, ../../../src/sass/mixins/_hero.scss */
 .landing-page .hero .site-title.bold {
@@ -7642,7 +7630,7 @@ canvas {
 }
 /* line 41, ../../../src/sass/mixins/_hero.scss */
 .page.signature-programme.sp-1 .hero .site-title.large {
-  font-size: 4.76837em;
+  font-size: 3.05176em;
 }
 /* line 44, ../../../src/sass/mixins/_hero.scss */
 .page.signature-programme.sp-1 .hero .site-title.bold {
@@ -7726,13 +7714,13 @@ canvas {
 }
 /* line 6, ../../../src/sass/components/_dataCounter.scss */
 .block-data-counter .value {
-  font-size: 2.44141em;
+  font-size: 1.5625em;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
   color: #ee7a4b;
 }
 /* line 11, ../../../src/sass/components/_dataCounter.scss */
 .block-data-counter .label {
-  font-size: 1.5625em;
+  font-size: 1.25em;
   color: #f0f1f2;
 }
 /* line 15, ../../../src/sass/components/_dataCounter.scss */
