@@ -6,177 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <script src="assets/javascripts/libs/Modernizr/modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Oswald:300,400,700" rel="stylesheet">
-    <link href="./assets/javascripts/libs/Swiper/css/swiper.min.css" type="text/css" media="screen" />
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/screen.css" media="screen" />
-    <script src="assets/javascripts/libs/Chartjs/dist/Chart.bundle.min.js"></script>
-    <script src="assets/javascripts/libs/Chartjs/dist/Chart.min.js"></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
 </head>
 <body class="landing-page impact front">
-    <header class="navigation primary-navigation" role="banner" id="primaryMenu">
-        <div class="navigation-wrapper">
-            <div class="container padding">
-                <div class="logos active">
-                    <ul>
-                        <li><img src="assets/images/logos/undp.svg" /></li>
-                        <li><img src="assets/images/logos/cca.svg" /></li>
-                    </ul>
+    <div id="pageTop"></div>
+    <div class="wrapper">
+        <a href="#section-4" class="corner-ribbon scroll-on-page-link" id="subscriptionRibbon">subscribe</a>
+        <div class="hero">
+            <div id="header" class="mobile">
+                <div class="logos">
+                    <img src="/assets/images/logos/cca.svg" />
+                    <img src="/assets/images/logos/undp.svg" />
                 </div>
-                <a href="#" class="navigation-menu-button" id="js-mobile-menu"><span class="fa fa-bars fa-2x"></span></a>
+                <div class="heading">
+                    <h1>UNDP Climate Change Adaptation</h1>
+                    <h2>Impacts 2016</h2>
+                </div>
             </div>
-            <nav role="navigation">
-                <ul id="js-navigation-menu" class="navigation-menu show">
-                    <li class="nav-link"><a href="javascript:void(0)">Home</a></li>
-                    <li class="nav-link"><a href="javascript:void(0)">About</a></li>
-                    <li class="nav-link"><a href="#">Themes</a></li>
-                    <li class="nav-link"><a href="javascript:void(0)">Knowledge Center</a></li>
-                    <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-                </ul>
-            </nav>
+            <ul class="main-menu" id="mainMenu" role="navigation">
+                <li><a class="scroll-on-page-link" href="#section-1">UNDP CCA </a><span class="fa fa-chevron-down"></span></li>
+                <li><a class="scroll-on-page-link" href="#section-2">Impact Stories </a><span class="fa fa-chevron-down"></span></li>
+                <li><a class="scroll-on-page-link" href="#section-3">Approaches </a><span class="fa fa-chevron-down"></span></li>
+            </ul>
+            <div class="gradient"></div>
+            <div class="bg-img" id="hero-bg" style="background-image: url('assets/images/photos/hero-home.jpg');"></div>
         </div>
-    </header>
-    <div class="hero page-banner">
-        <!-- Hero Background Image -->
-        <div class="container">
-            <h2 class="site-title bold small first flipInX animated">UNDP Climate Change Adaptation Portfolio</h2>
-            <h1 class="site-title large second flipInX animated">Impacts 2016</h1>
-        </div>
+        <article>
+            <div id="section-1" class="section">
+                <h4>UNDP CCA</h4>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus.</p>
+            </div>
+            <div id="section-2" class="section">
+                <h4>Impact Stories</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+            </div>
+            <div id="section-3" class="section">
+                <h4>Approaches</h4>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus.</p>
+            </div>
+            <div id="section-4" class="section">
+                <h4>Subscribe</h4>
+                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus.</p>
+            </div>
+        </article>
+        <footer>
+            <h1>Footer</h1>
+        </footer>
     </div>
-    <div class="container content">
-        <div class="block grid-12 block-data-counter">
-            <div class="grid-4-cols small">
-                <p class="value"><span class="count-num-1">156</span></p>
-                <p class="label">projects</p>
-            </div>
-            <div class="grid-4-cols small">
-                <p class="value"><span class="count-num">23017011</span></p>
-                <p class="label">direct beneficiaries</p>
-            </div>
-            <div class="grid-4-cols small">
-                <p class="value"><span class="count-num-1">115</span></p>
-                <p class="label">countries</p>
-            </div>
-        </div>
-        <div class="block padding light">
-            <h1>About UNDP CCA</h1>
-            <p class="highlight">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-            <p>Donec rutrum congue leo eget malesuada. Proin eget tortor risus. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-            <h4>Programme balance between developing nations</h4>
-            <div class="grid grid-12">
-                <div class="grid-8-cols small"><canvas id="countryBalanceChart"></canvas></div>
-                <div class="grid-4-cols small">
-                    <ul class="chart-legend">
-                        <li>Least Developed Countries (LDCs)</li>
-                        <li>Developing Countries (non-LDCs)</li>
-                        <li>Small Island Developing States (SIDS)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="block dark">
-            <h1>Signature Programmes</h1>
-            <p class="highlight">UNDP's 6 Climate Change Adaptation Signature Programmes seek to address the complex human development challenges countries and regions face because of climate change.</p>
-            <h4>Learn about the impacts of UNDP's Climate Change Adaptation Signature Programmes</h4>
-            <div class="grid grid-12 line-wrap">
-                <div class="grid-4-cols small">
-                    <div class="hover-tile-outer">
-                        <div class="hover-tile-container" onClick="void(0)">
-                            <div class="hover-tile hover-tile-visible">
-                                <h5>#1</h5>
-                                <p>Supporting Integrated Climate Change Strategies</p>
-                            </div>
-                            <div class="hover-tile hover-tile-hidden">
-                                <p>Assisting governments to develop and strengthen policies, institutions, capacities and knowledge for integrated green, low-emission and climate resilient development, including financing mechanisms.</p>
-                                <p><a href="/signature-programmes/1.html" class="button">Learn More</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-4-cols small">
-                    <div class="hover-tile-outer">
-                        <div class="hover-tile-container" onClick="void(0)">
-                            <div class="hover-tile hover-tile-visible">
-                                <h4>#2</h4>
-                                <p>Advancing cross-sectoral climate resilient livelihoods</p>
-                            </div>
-                            <div class="hover-tile hover-tile-hidden">
-                                <h4>Hidden Copy</h4>
-                                <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-4-cols small">
-                    <div class="hover-tile-outer">
-                        <div class="hover-tile-container" onClick="void(0)">
-                            <div class="hover-tile hover-tile-visible">
-                                <h4>#3</h4>
-                                <p>Ecosystem-based Adaptation</p>
-                            </div>
-                            <div class="hover-tile hover-tile-hidden">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-4-cols small">
-                    <div class="hover-tile-outer">
-                        <div class="hover-tile-container" onClick="void(0)">
-                            <div class="hover-tile hover-tile-visible">
-                                <h4>#4</h4>
-                                <p>Fostering resilience for food security</p>
-                            </div>
-                            <div class="hover-tile hover-tile-hidden">
-                                <h4>Hidden Copy</h4>
-                                <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-4-cols small">
-                    <div class="hover-tile-outer">
-                        <div class="hover-tile-container" onClick="void(0)">
-                            <div class="hover-tile hover-tile-visible">
-                                <h4>#5</h4>
-                                <p>Climate resilient integrated water resource and coastal management</p>
-                            </div>
-                            <div class="hover-tile hover-tile-hidden">
-                                <h4>Hidden Copy</h4>
-                                <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-4-cols small">
-                    <div class="hover-tile-outer">
-                        <div class="hover-tile-container" onClick="void(0)">
-                            <div class="hover-tile hover-tile-visible">
-                                <h4>#6</h4>
-                                <p>Promoting climate resilient infrastructure and energy</p>
-                            </div>
-                            <div class="hover-tile hover-tile-hidden">
-                                <h5>Hidden Copy</h5>
-                                <p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="signature-programme-map"></div>
-        </div>
-    </div>
-</div>
-
+    <a class="scroll-on-page-link scrolled" href="#pageTop" id="goToTop"><span class="fa fa-chevron-up" aria-hidden="true"></span></a>
 <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
 <script src="./assets/javascripts/libs/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
-<script src="./assets/javascripts/libs/Chartjs/dist/Chart.min.js"></script>
 <script src="./assets/javascripts/behaviours/scrollingEffects.js"></script>
-<script src="./assets/javascripts/behaviours/animationControl.js"></script>
-<script src="./assets/javascripts/behaviours/blockSpacing.js"></script>
-<script src="./assets/javascripts/behaviours/numberCounter.js"></script>
-<script src="./assets/javascripts/components/menu.js"></script>
-<script src="./assets/data/countryBalanceChart.js"></script>
-<script src="./assets/data/signature_programmes.js"></script>
-<script src="//localhost:35729/livereload.js"></script> <!-- Development only -->
+<script src="assets/javascripts/behaviours/scrollOnPage.js"></script>
+<script src="assets/javascripts/behaviours/parallax.js"></script>
 </body>
 </html>

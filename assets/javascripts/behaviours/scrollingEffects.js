@@ -3,13 +3,22 @@
         var controller = new ScrollMagic.Controller();
 
         var menuBehaviour = new ScrollMagic.Scene({
-            triggerElement: '#primaryMenu',
+            triggerElement: '#mainMenu',
             triggerHook: 0,
             loglevel: 0,
             offset: 1
         })
-            .setPin('#primaryMenu')
-            .setClassToggle('#primaryMenu','inactive')
+            .setPin('#mainMenu')
+            .setClassToggle('#mainMenu','scrolled')
+            .addTo(controller);
+
+        var ribbonBehaviour = new ScrollMagic.Scene({
+            triggerElement: '#mainMenu',
+            triggerHook: 0,
+            loglevel: 0,
+            offset: 1
+        })
+            .setClassToggle('#subscriptionRibbon','scrolled')
             .addTo(controller);
     });
 
