@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><Page Title></title>
+    <title>UNDP Climate Change Adaptation: Impacts 2016</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <script src="assets/javascripts/libs/Modernizr/modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Oswald:300,400,700" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/screen.css" media="screen" />
 </head>
 <body class="landing-page impact front">
@@ -15,8 +17,10 @@
         <div class="hero">
             <div id="header" class="mobile">
                 <div class="logos">
-                    <img src="/assets/images/logos/cca.svg" />
-                    <img src="/assets/images/logos/undp.svg" />
+                    <ul>
+                        <li><img src="/assets/images/logos/cca.svg" /></li>
+                        <li><img src="/assets/images/logos/undp.svg" /></li>
+                    </ul>
                 </div>
                 <div class="heading">
                     <h1>UNDP Climate Change Adaptation</h1>
@@ -32,32 +36,96 @@
             <div class="bg-img" id="hero-bg" style="background-image: url('assets/images/photos/hero-home.jpg');"></div>
         </div>
         <article>
-            <div id="section-1" class="section">
-                <h4>UNDP CCA</h4>
-                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus.</p>
+            <div id="section-1" class="section padding">
+                <h1>UNDP CCA</h1>
+                <p>UNDP is one of the leading UN Agencies assisting countries on adaptation to climate change. We provide support to implement on-the-ground interventions to reduce vulnerabilities to climate extremes; we create enabling policy, institutional, social, economic, environmental and political conditions to better manage the impacts of climate change as they unfold in developing countries, especially least developed countries.</p>
+                <p>In 2016, our work has progressed from ideas to projects, from action to results. This is reflected in our signature programmes.</p>
+                <div class="card">
+                    <h4>Explore UNDP CCA Signature Programmes</h4>
+                    <div class="app-container" id="app">
+                        <nav id="menu"></nav>
+                        <div class="map-container">
+                            <div id="map"></div>
+                            <div class="signature-programme container active" id="container-sp1">
+                                <h4>1. Supporting Integrated Climate Change Strategies</h4>
+                            </div>
+                            <div class="signature-programme container" id="container-sp2">
+                                <h4>2. Advanced Cross-Sectoral Climate Resilient Livelihoods</h4>
+                            </div>
+                            <div class="signature-programme container" id="container-sp3">
+                                <h4>3. Ecosystem-Based Adaptation</h4>
+                            </div>
+                            <div class="signature-programme container" id="container-sp4">
+                                <h4>4. Fostering Resilience for Food Security</h4>
+                            </div>
+                            <div class="signature-programme container" id="container-sp5">
+                                <h4>5. Climate-resilient Integrated Water and Coastal Management</h4>
+                            </div>
+                            <div class="signature-programme container" id="container-sp6">
+                                <h4>6. Community Resilience Through Integrated Landscape Management</h4>
+                            </div>
+                        </div>
+                        <div class="container graph">
+                            <h5><span id="numProjects">80</span> Projects</h5>
+                            <canvas id="regionsChart" class="graph bar"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="section-2" class="section">
-                <h4>Impact Stories</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+            <div id="section-2" class="section padding">
+                <h1>Impact Stories</h1>
+                <ul class="content-list horizontal carousel" id="storyList">
+                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/1.jpg');"></div><div class="caption"><p>Water supply in Cambodia</p></div></div></li>
+                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/2.jpg');"></div><div class="caption"><p>A longer captions that will necessitate wrapping over a couple of lines</p></div></div></li>
+                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/3.jpg');"></div><div class="caption"></div></div></li>
+                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/4.jpg');"></div><div class="caption"></div></div></li>
+                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/5.jpg');"></div><div class="caption"></div></div></li>
+                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/6.jpg');"></div><div class="caption"></div></div></li>
+                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/7.jpg');"></div><div class="caption"></div></div></li>
+                </ul>
             </div>
-            <div id="section-3" class="section">
-                <h4>Approaches</h4>
-                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus.</p>
-            </div>
-            <div id="section-4" class="section">
-                <h4>Subscribe</h4>
-                <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus.</p>
+
+            <div id="section-3" class="section padding">
+                <h1>Approaches</h1>
+                <p>Insert 6 responsive tiles linked to work we've done in 2016</p>
+            <div id="section-4" class="section padding">
+                <h1>Subscribe</h1>
+                <form class="subscribe grid" id="subscribeForm" action="#section-4">
+                    <input type="text" class="grid-8-cols small"><input type="submit" value="subscribe" class="grid-4-cols small submit"></form>
+                </form>
             </div>
         </article>
         <footer>
             <h1>Footer</h1>
         </footer>
     </div>
-    <a class="scroll-on-page-link scrolled" href="#pageTop" id="goToTop"><span class="fa fa-chevron-up" aria-hidden="true"></span></a>
+    <a class="scroll-on-page-link" href="#pageTop" id="goToTop"><span class="fa fa-chevron-up" aria-hidden="true"></span></a>
+
+    <!-- Javascripts -->
+    <!-- Libraries First -->
 <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
 <script src="./assets/javascripts/libs/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
+<script src="assets/javascripts/libs/Chartjs/dist/Chart.bundle.js"></script>
+<script src="assets/javascripts/libs/spin/spin.min.js"></script>
+
+    <!-- Site Behaviours -->
 <script src="./assets/javascripts/behaviours/scrollingEffects.js"></script>
 <script src="assets/javascripts/behaviours/scrollOnPage.js"></script>
 <script src="assets/javascripts/behaviours/parallax.js"></script>
+<script src="assets/javascripts/behaviours/spinnerCtrl.js"></script>
+<script src="assets/data/regionData.js"></script>
+<script src="assets/javascripts/components/mapApp.js"></script>
+<script src="assets/javascripts/behaviours/carousel.js"></script>
+    <script>
+        var options = {
+            valueNames: [
+                {data: ['id']}
+            ]
+        }
+        var countryList = new List('countryList', options);
+    </script>
+<script src="//localhost:35729/livereload.js"></script> <!-- Development only -->
 </body>
 </html>

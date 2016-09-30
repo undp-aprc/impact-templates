@@ -20,6 +20,15 @@
         })
             .setClassToggle('#subscriptionRibbon','scrolled')
             .addTo(controller);
+
+        var scrollToTop = new ScrollMagic.Scene({
+            triggerElement: '#mainMenu',
+            triggerHook: 0,
+            loglevel: 0,
+            offset: 1
+        })
+            .setClassToggle('#goToTop','scrolled')
+            .addTo(controller);
     });
 
     /* Functions using the appear jquery plugin */
