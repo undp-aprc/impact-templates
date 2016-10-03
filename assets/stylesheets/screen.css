@@ -7203,11 +7203,18 @@ footer {
 }
 
 /* line 17, ../../../src/sass/scaffold/_scaffold.scss */
-.section h1 {
+.section h1, .section p {
   text-align: center;
 }
 
 /* line 23, ../../../src/sass/scaffold/_scaffold.scss */
+.fixed-width {
+  max-width: 64em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 29, ../../../src/sass/scaffold/_scaffold.scss */
 .padding {
   padding: 1em;
 }
