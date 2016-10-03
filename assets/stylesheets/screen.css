@@ -7209,7 +7209,7 @@ footer {
 
 /* line 23, ../../../src/sass/scaffold/_scaffold.scss */
 .fixed-width {
-  max-width: 64em;
+  margin: 0 10%;
   margin-left: auto;
   margin-right: auto;
 }
