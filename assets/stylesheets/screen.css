@@ -7297,7 +7297,13 @@ footer {
     height: 600px;
   }
 }
-/* line 19, ../../../src/sass/components/_hero.scss */
+@media screen and (min-width: 1401px) {
+  /* line 1, ../../../src/sass/components/_hero.scss */
+  .hero {
+    height: 1000px;
+  }
+}
+/* line 22, ../../../src/sass/components/_hero.scss */
 .hero .gradient {
   position: absolute;
   top: 0;
@@ -7306,7 +7312,7 @@ footer {
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent, transparent);
 }
-/* line 29, ../../../src/sass/components/_hero.scss */
+/* line 32, ../../../src/sass/components/_hero.scss */
 .hero .main-menu {
   position: absolute;
   bottom: 0;
@@ -7315,19 +7321,19 @@ footer {
   font-size: 0.8em;
 }
 @media screen and (min-width: 768px) {
-  /* line 29, ../../../src/sass/components/_hero.scss */
+  /* line 32, ../../../src/sass/components/_hero.scss */
   .hero .main-menu {
     font-size: 1em;
   }
 }
-/* line 39, ../../../src/sass/components/_hero.scss */
+/* line 42, ../../../src/sass/components/_hero.scss */
 .hero #header {
   position: absolute;
   z-index: 500;
   width: 100%;
   height: 207px;
 }
-/* line 47, ../../../src/sass/components/_hero.scss */
+/* line 50, ../../../src/sass/components/_hero.scss */
 .hero .bg-img {
   position: absolute;
   top: 0;
@@ -7340,35 +7346,35 @@ footer {
   background-size: auto;
 }
 @media screen and (min-width: 1200px) {
-  /* line 47, ../../../src/sass/components/_hero.scss */
+  /* line 50, ../../../src/sass/components/_hero.scss */
   .hero .bg-img {
     background-size: 150%;
   }
 }
-/* line 62, ../../../src/sass/components/_hero.scss */
+/* line 65, ../../../src/sass/components/_hero.scss */
 .hero .heading {
   padding: 3em 0 0 0;
   width: 100%;
 }
-/* line 65, ../../../src/sass/components/_hero.scss */
+/* line 68, ../../../src/sass/components/_hero.scss */
 .hero .heading h1 {
   font-size: 1.25em;
 }
-/* line 68, ../../../src/sass/components/_hero.scss */
+/* line 71, ../../../src/sass/components/_hero.scss */
 .hero .heading h2 {
   font-size: 1.95313em;
 }
 @media screen and (min-width: 640px) {
-  /* line 72, ../../../src/sass/components/_hero.scss */
+  /* line 75, ../../../src/sass/components/_hero.scss */
   .hero .heading h1 {
     font-size: 1.95313em;
   }
-  /* line 75, ../../../src/sass/components/_hero.scss */
+  /* line 78, ../../../src/sass/components/_hero.scss */
   .hero .heading h2 {
     font-size: 3.05176em;
   }
 }
-/* line 80, ../../../src/sass/components/_hero.scss */
+/* line 83, ../../../src/sass/components/_hero.scss */
 .hero h1, .hero h2 {
   color: white;
   text-align: center;
@@ -7743,6 +7749,58 @@ a.corner-ribbon.scrolled:hover {
 /* line 65, ../../../src/sass/components/_carousel.scss */
 #storyList .slick-button-prev {
   left: 1.5rem;
+}
+
+/* line 2, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides article {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* line 7, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides .swiper-container {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+/* line 11, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides .swiper-container h1, .horizontal-slides .swiper-container h2, .horizontal-slides .swiper-container h3, .horizontal-slides .swiper-container h4, .horizontal-slides .swiper-container h5, .horizontal-slides .swiper-container p {
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+}
+/* line 16, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides .swiper-container .slide-button {
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  font-size: 5em;
+}
+/* line 21, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides .swiper-container .slide-button.next {
+  right: 0;
+}
+/* line 24, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides .swiper-container .slide-button.previous {
+  left: 0;
+}
+/* line 29, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: top center;
+}
+
+/* line 20, ../../../src/sass/libraries/neat/mixins/_clearfix.scss */
+.case-studies li::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */
