@@ -18,6 +18,19 @@
                     }
                 },
             ]
+        });
+
+        var maxHeight = 0;
+
+        $('.caption').each(function() {
+            var me = $(this);
+            var height = me.height();
+            maxHeight = height > maxHeight ? height : maxHeight;
+        });
+
+        $('.caption').each(function() {
+            $(this).height(maxHeight);
         })
+
     });
 })(jQuery);
