@@ -7553,20 +7553,14 @@ a.corner-ribbon.scrolled:hover {
     height: 60em;
   }
 }
-@media screen and (min-width: 90em) {
-  /* line 6, ../../../src/sass/components/_mapApp.scss */
-  .map-container #map {
-    height: 40em;
-  }
-}
-/* line 25, ../../../src/sass/components/_mapApp.scss */
+/* line 22, ../../../src/sass/components/_mapApp.scss */
 .map-container .signature-programme.container {
   position: absolute;
   z-index: 10;
   top: 0;
   width: 100%;
 }
-/* line 30, ../../../src/sass/components/_mapApp.scss */
+/* line 27, ../../../src/sass/components/_mapApp.scss */
 .map-container .signature-programme.container h4 {
   position: absolute;
   top: 0;
@@ -7576,19 +7570,19 @@ a.corner-ribbon.scrolled:hover {
   min-height: 2em;
   color: white;
 }
-/* line 39, ../../../src/sass/components/_mapApp.scss */
+/* line 36, ../../../src/sass/components/_mapApp.scss */
 .map-container .signature-programme.container.active h4 {
   display: block;
 }
 
-/* line 45, ../../../src/sass/components/_mapApp.scss */
+/* line 42, ../../../src/sass/components/_mapApp.scss */
 #menu {
   right: 10px;
   border-radius: 3px;
   margin-bottom: 1em;
   text-align: center;
 }
-/* line 51, ../../../src/sass/components/_mapApp.scss */
+/* line 48, ../../../src/sass/components/_mapApp.scss */
 #menu a {
   display: inline-block;
   margin-right: 1em;
@@ -7597,37 +7591,37 @@ a.corner-ribbon.scrolled:hover {
   margin-bottom: 0.2em;
 }
 
-/* line 60, ../../../src/sass/components/_mapApp.scss */
+/* line 57, ../../../src/sass/components/_mapApp.scss */
 #container-sp1 h4 {
   background-color: rgba(250, 128, 36, 0.8);
 }
 
-/* line 64, ../../../src/sass/components/_mapApp.scss */
+/* line 61, ../../../src/sass/components/_mapApp.scss */
 #container-sp2 h4 {
   background-color: rgba(188, 33, 55, 0.8);
 }
 
-/* line 68, ../../../src/sass/components/_mapApp.scss */
+/* line 65, ../../../src/sass/components/_mapApp.scss */
 #container-sp3 h4 {
   background-color: rgba(134, 193, 230, 0.8);
 }
 
-/* line 72, ../../../src/sass/components/_mapApp.scss */
+/* line 69, ../../../src/sass/components/_mapApp.scss */
 #container-sp4 h4 {
   background-color: rgba(27, 126, 18, 0.8);
 }
 
-/* line 76, ../../../src/sass/components/_mapApp.scss */
+/* line 73, ../../../src/sass/components/_mapApp.scss */
 #container-sp5 h4 {
   background-color: rgba(16, 133, 252, 0.8);
 }
 
-/* line 80, ../../../src/sass/components/_mapApp.scss */
+/* line 77, ../../../src/sass/components/_mapApp.scss */
 #container-sp6 h4 {
   background-color: rgba(126, 36, 127, 0.8);
 }
 
-/* line 84, ../../../src/sass/components/_mapApp.scss */
+/* line 81, ../../../src/sass/components/_mapApp.scss */
 #menu a.toggle-btn {
   font-size: 1em;
   border-radius: 3px;
@@ -7639,49 +7633,49 @@ a.corner-ribbon.scrolled:hover {
   text-align: center;
 }
 
-/* line 96, ../../../src/sass/components/_mapApp.scss */
+/* line 93, ../../../src/sass/components/_mapApp.scss */
 #menu a:hover {
   background-color: #f8f8f8;
   color: #404040;
 }
 
-/* line 101, ../../../src/sass/components/_mapApp.scss */
+/* line 98, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp1 {
   background-color: #fa8024;
   color: #ffffff;
 }
 
-/* line 105, ../../../src/sass/components/_mapApp.scss */
+/* line 102, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp2 {
   background-color: #bc2137;
   color: #ffffff;
 }
 
-/* line 109, ../../../src/sass/components/_mapApp.scss */
+/* line 106, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp3 {
   background-color: #86c1e6;
   color: #ffffff;
 }
 
-/* line 113, ../../../src/sass/components/_mapApp.scss */
+/* line 110, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp4 {
   background-color: #1b7e12;
   color: #ffffff;
 }
 
-/* line 117, ../../../src/sass/components/_mapApp.scss */
+/* line 114, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp5 {
   background-color: #1085fc;
   color: #ffffff;
 }
 
-/* line 121, ../../../src/sass/components/_mapApp.scss */
+/* line 118, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp6 {
   background-color: #7e247f;
   color: #ffffff;
 }
 
-/* line 126, ../../../src/sass/components/_mapApp.scss */
+/* line 123, ../../../src/sass/components/_mapApp.scss */
 #menu a.active:hover {
   background: #3074a4;
 }
