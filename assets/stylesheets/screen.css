@@ -7024,6 +7024,30 @@ h1, h2 {
   font-weight: bold;
 }
 
+@media screen and (min-width: 48em) {
+  /* line 2, ../../../src/sass/scaffold/_small.scss */
+  body {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 2, ../../../src/sass/scaffold/_medium.scss */
+  body {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 2, ../../../src/sass/scaffold/_large.scss */
+  body {
+    font-size: 200%;
+  }
+}
+@media screen and (min-width: 90em) {
+  /* line 2, ../../../src/sass/scaffold/_x_large.scss */
+  body {
+    font-size: 250%;
+  }
+}
 /* line 20, ../../../src/sass/libraries/neat/mixins/_clearfix.scss */
 .grid::after {
   clear: both;
@@ -7047,7 +7071,7 @@ h1, h2 {
 .grid-2-cols:last-child {
   margin-right: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 13, ../../../src/sass/scaffold/_grid.scss */
   .grid-2-cols.small {
     float: left;
@@ -7074,7 +7098,7 @@ h1, h2 {
 .grid-3-cols:last-child {
   margin-right: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 24, ../../../src/sass/scaffold/_grid.scss */
   .grid-3-cols.small {
     float: left;
@@ -7109,7 +7133,7 @@ h1, h2 {
 .grid-4-cols:last-child {
   margin-right: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 36, ../../../src/sass/scaffold/_grid.scss */
   .grid-4-cols.small {
     float: left;
@@ -7144,7 +7168,7 @@ h1, h2 {
 .grid-8-cols:last-child {
   margin-right: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 48, ../../../src/sass/scaffold/_grid.scss */
   .grid-8-cols.small {
     float: left;
@@ -7191,30 +7215,23 @@ input.submit:hover {
   background-color: #009ed4;
 }
 
-/* line 7, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 8, ../../../src/sass/scaffold/_scaffold.scss */
 article {
   padding: 1em 0;
 }
 
-/* line 11, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 12, ../../../src/sass/scaffold/_scaffold.scss */
 footer {
   height: 50vh;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png"), linear-gradient(0, #333, #555), center no-repeat #333 scroll;
 }
 
-/* line 17, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 18, ../../../src/sass/scaffold/_scaffold.scss */
 .section h1, .section p {
   text-align: center;
 }
 
-/* line 23, ../../../src/sass/scaffold/_scaffold.scss */
-.fixed-width {
-  max-width: 64em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* line 29, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 24, ../../../src/sass/scaffold/_scaffold.scss */
 .padding {
   padding: 1em;
 }
@@ -7255,7 +7272,7 @@ footer {
 .main-menu.scrolled:hover {
   padding: 1em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 26, ../../../src/sass/components/_main_menu.scss */
   .main-menu.scrolled:hover {
     padding: 1.5em;
@@ -7285,22 +7302,22 @@ footer {
 .hero .inner {
   padding: 1em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 1, ../../../src/sass/components/_hero.scss */
   .hero {
-    height: 500px;
+    height: 30em;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 64em) {
   /* line 1, ../../../src/sass/components/_hero.scss */
   .hero {
-    height: 600px;
+    height: 36em;
   }
 }
-@media screen and (min-width: 1401px) {
+@media screen and (min-width: 90em) {
   /* line 1, ../../../src/sass/components/_hero.scss */
   .hero {
-    height: 1000px;
+    height: 60em;
   }
 }
 /* line 22, ../../../src/sass/components/_hero.scss */
@@ -7320,7 +7337,7 @@ footer {
   z-index: 1000;
   font-size: 0.8em;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 32, ../../../src/sass/components/_hero.scss */
   .hero .main-menu {
     font-size: 1em;
@@ -7345,7 +7362,7 @@ footer {
   background-position: 50% 0px;
   background-size: auto;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75em) {
   /* line 50, ../../../src/sass/components/_hero.scss */
   .hero .bg-img {
     background-size: 150%;
@@ -7364,7 +7381,7 @@ footer {
 .hero .heading h2 {
   font-size: 1.95313em;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 40em) {
   /* line 75, ../../../src/sass/components/_hero.scss */
   .hero .heading h1 {
     font-size: 1.95313em;
@@ -7382,16 +7399,16 @@ footer {
 
 /* line 1, ../../../src/sass/components/_ribbon.scss */
 a.corner-ribbon {
-  width: 200px;
+  width: 12.5em;
   background: #40b6df;
   position: fixed;
   text-align: center;
-  line-height: 50px;
+  line-height: 3em;
   letter-spacing: 1px;
   color: white;
   z-index: 2000;
-  top: 25px;
-  right: -50px;
+  top: 1.5em;
+  right: -3em;
   left: auto;
   transform: rotate(45deg);
   font-weight: bold;
@@ -7399,7 +7416,7 @@ a.corner-ribbon {
   display: none;
   transition: all 0.2s linear;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 1, ../../../src/sass/components/_ribbon.scss */
   a.corner-ribbon {
     display: block;
@@ -7459,13 +7476,13 @@ a.corner-ribbon.scrolled:hover {
   height: 70px;
   margin-top: 1em;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 40em) {
   /* line 1, ../../../src/sass/components/_logos.scss */
   .logos {
     height: 150px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75em) {
   /* line 1, ../../../src/sass/components/_logos.scss */
   .logos {
     height: 250px;
@@ -7482,13 +7499,13 @@ a.corner-ribbon.scrolled:hover {
   height: 100%;
   padding: 0.5em;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 40em) {
   /* line 15, ../../../src/sass/components/_logos.scss */
   .logos ul li {
     width: 150px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 75em) {
   /* line 15, ../../../src/sass/components/_logos.scss */
   .logos ul li {
     width: 250px;
@@ -7518,20 +7535,32 @@ a.corner-ribbon.scrolled:hover {
   z-index: 0;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 6, ../../../src/sass/components/_mapApp.scss */
   .map-container #map {
     height: 40em;
   }
 }
-/* line 16, ../../../src/sass/components/_mapApp.scss */
+@media screen and (min-width: 64em) {
+  /* line 6, ../../../src/sass/components/_mapApp.scss */
+  .map-container #map {
+    height: 50em;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 6, ../../../src/sass/components/_mapApp.scss */
+  .map-container #map {
+    height: 60em;
+  }
+}
+/* line 22, ../../../src/sass/components/_mapApp.scss */
 .map-container .signature-programme.container {
   position: absolute;
   z-index: 10;
   top: 0;
   width: 100%;
 }
-/* line 21, ../../../src/sass/components/_mapApp.scss */
+/* line 27, ../../../src/sass/components/_mapApp.scss */
 .map-container .signature-programme.container h4 {
   position: absolute;
   top: 0;
@@ -7541,19 +7570,19 @@ a.corner-ribbon.scrolled:hover {
   min-height: 2em;
   color: white;
 }
-/* line 30, ../../../src/sass/components/_mapApp.scss */
+/* line 36, ../../../src/sass/components/_mapApp.scss */
 .map-container .signature-programme.container.active h4 {
   display: block;
 }
 
-/* line 36, ../../../src/sass/components/_mapApp.scss */
+/* line 42, ../../../src/sass/components/_mapApp.scss */
 #menu {
   right: 10px;
   border-radius: 3px;
   margin-bottom: 1em;
   text-align: center;
 }
-/* line 42, ../../../src/sass/components/_mapApp.scss */
+/* line 48, ../../../src/sass/components/_mapApp.scss */
 #menu a {
   display: inline-block;
   margin-right: 1em;
@@ -7562,37 +7591,37 @@ a.corner-ribbon.scrolled:hover {
   margin-bottom: 0.2em;
 }
 
-/* line 51, ../../../src/sass/components/_mapApp.scss */
+/* line 57, ../../../src/sass/components/_mapApp.scss */
 #container-sp1 h4 {
   background-color: rgba(250, 128, 36, 0.8);
 }
 
-/* line 55, ../../../src/sass/components/_mapApp.scss */
+/* line 61, ../../../src/sass/components/_mapApp.scss */
 #container-sp2 h4 {
   background-color: rgba(188, 33, 55, 0.8);
 }
 
-/* line 59, ../../../src/sass/components/_mapApp.scss */
+/* line 65, ../../../src/sass/components/_mapApp.scss */
 #container-sp3 h4 {
   background-color: rgba(134, 193, 230, 0.8);
 }
 
-/* line 63, ../../../src/sass/components/_mapApp.scss */
+/* line 69, ../../../src/sass/components/_mapApp.scss */
 #container-sp4 h4 {
   background-color: rgba(27, 126, 18, 0.8);
 }
 
-/* line 67, ../../../src/sass/components/_mapApp.scss */
+/* line 73, ../../../src/sass/components/_mapApp.scss */
 #container-sp5 h4 {
   background-color: rgba(16, 133, 252, 0.8);
 }
 
-/* line 71, ../../../src/sass/components/_mapApp.scss */
+/* line 77, ../../../src/sass/components/_mapApp.scss */
 #container-sp6 h4 {
   background-color: rgba(126, 36, 127, 0.8);
 }
 
-/* line 75, ../../../src/sass/components/_mapApp.scss */
+/* line 81, ../../../src/sass/components/_mapApp.scss */
 #menu a.toggle-btn {
   font-size: 1em;
   border-radius: 3px;
@@ -7604,49 +7633,49 @@ a.corner-ribbon.scrolled:hover {
   text-align: center;
 }
 
-/* line 87, ../../../src/sass/components/_mapApp.scss */
+/* line 93, ../../../src/sass/components/_mapApp.scss */
 #menu a:hover {
   background-color: #f8f8f8;
   color: #404040;
 }
 
-/* line 92, ../../../src/sass/components/_mapApp.scss */
+/* line 98, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp1 {
   background-color: #fa8024;
   color: #ffffff;
 }
 
-/* line 96, ../../../src/sass/components/_mapApp.scss */
+/* line 102, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp2 {
   background-color: #bc2137;
   color: #ffffff;
 }
 
-/* line 100, ../../../src/sass/components/_mapApp.scss */
+/* line 106, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp3 {
   background-color: #86c1e6;
   color: #ffffff;
 }
 
-/* line 104, ../../../src/sass/components/_mapApp.scss */
+/* line 110, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp4 {
   background-color: #1b7e12;
   color: #ffffff;
 }
 
-/* line 108, ../../../src/sass/components/_mapApp.scss */
+/* line 114, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp5 {
   background-color: #1085fc;
   color: #ffffff;
 }
 
-/* line 112, ../../../src/sass/components/_mapApp.scss */
+/* line 118, ../../../src/sass/components/_mapApp.scss */
 #menu a.active#btn-sp6 {
   background-color: #7e247f;
   color: #ffffff;
 }
 
-/* line 117, ../../../src/sass/components/_mapApp.scss */
+/* line 123, ../../../src/sass/components/_mapApp.scss */
 #menu a.active:hover {
   background: #3074a4;
 }
@@ -7674,36 +7703,57 @@ a.corner-ribbon.scrolled:hover {
   background-repeat: no-repeat;
   width: 100%;
   height: 15em;
-  max-height: 600px;
   transition: all 1s linear;
   filter: grayscale(100%);
   opacity: 0.5;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 30em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
   .content-list.carousel .image {
-    height: 18em;
+    height: 24em;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 40em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
   .content-list.carousel .image {
-    height: 26em;
+    height: 30em;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 52em) {
+  /* line 2, ../../../src/sass/components/_carousel.scss */
+  .content-list.carousel .image {
+    height: 40em;
+  }
+}
+@media screen and (min-width: 60em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
   .content-list.carousel .image {
     height: 15em;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 64em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
   .content-list.carousel .image {
-    height: 22em;
+    height: 10em;
   }
 }
+@media screen and (min-width: 75em) {
+  /* line 2, ../../../src/sass/components/_carousel.scss */
+  .content-list.carousel .image {
+    height: 8em;
+  }
+}
+<<<<<<< HEAD
 /* line 27, ../../../src/sass/components/_carousel.scss */
+=======
+@media screen and (min-width: 90em) {
+  /* line 2, ../../../src/sass/components/_carousel.scss */
+  .content-list.carousel .image {
+    height: 10em;
+  }
+}
+/* line 33, ../../../src/sass/components/_carousel.scss */
+>>>>>>> v2.1.1
 .content-list.carousel .caption {
   min-height: 5em;
   background-color: white;
@@ -7712,11 +7762,16 @@ a.corner-ribbon.scrolled:hover {
   text-align: center;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
 }
+<<<<<<< HEAD
 /* line 34, ../../../src/sass/components/_carousel.scss */
+=======
+/* line 40, ../../../src/sass/components/_carousel.scss */
+>>>>>>> v2.1.1
 .content-list.carousel .caption p {
   padding: 1em 0;
   margin-bottom: 0;
 }
+<<<<<<< HEAD
 /* line 40, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .swiper-slide-active .image {
   filter: none;
@@ -7724,6 +7779,29 @@ a.corner-ribbon.scrolled:hover {
 }
 /* line 45, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .slide-button {
+=======
+/* line 45, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel li {
+  padding: 0 0.5em;
+}
+/* line 48, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel li .image {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+/* line 54, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel li.slick-current .image {
+  filter: none;
+  opacity: 1;
+}
+
+/* line 61, ../../../src/sass/components/_carousel.scss */
+#storyList {
+  position: relative;
+}
+/* line 63, ../../../src/sass/components/_carousel.scss */
+#storyList .slick-button {
+>>>>>>> v2.1.1
   position: absolute;
   top: 30%;
   z-index: 1000;
@@ -7742,6 +7820,7 @@ a.corner-ribbon.scrolled:hover {
 .content-list.carousel .slide-button.slide-button-prev {
   left: 1rem;
 }
+<<<<<<< HEAD
 
 /* line 1, ../../../src/sass/components/_flip_card.scss */
 .flip-container {
@@ -7800,6 +7879,15 @@ a.corner-ribbon.scrolled:hover {
 #approachesList {
   display: flex;
   flex-flow: row wrap;
+=======
+/* line 70, ../../../src/sass/components/_carousel.scss */
+#storyList .slick-button-next {
+  right: 1.5rem;
+}
+/* line 73, ../../../src/sass/components/_carousel.scss */
+#storyList .slick-button-prev {
+  left: 1.5rem;
+>>>>>>> v2.1.1
 }
 
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */
@@ -7809,7 +7897,7 @@ a.corner-ribbon.scrolled:hover {
   width: 50%;
   margin: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   /* line 1, ../../../src/sass/styles/charts/_charts.scss */
   .chart-legend {
     width: 100%;
