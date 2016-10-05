@@ -7,7 +7,7 @@
     <script src="assets/javascripts/libs/Modernizr/modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Oswald:300,400,700" rel="stylesheet">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/screen.css" media="screen" />
 </head>
 <body class="landing-page impact front">
@@ -75,20 +75,61 @@
             </div>
             <div id="section-2" class="section padding">
                 <h1>Impact Stories</h1>
-                <ul class="content-list horizontal carousel" id="storyList">
-                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/1.jpg');"></div><div class="caption"><p>Water supply in Mali</p></div></div></li>
-                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/2.jpg');"></div><div class="caption"><p>A longer captions that will necessitate wrapping over a couple of lines</p></div></div></li>
-                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/3.jpg');"></div><div class="caption"></div></div></li>
-                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/4.jpg');"></div><div class="caption"></div></div></li>
-                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/5.jpg');"></div><div class="caption"></div></div></li>
-                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/6.jpg');"></div><div class="caption"></div></div></li>
-                    <li><div class="item-wrapper"><div class="image" style="background-image: url('/assets/images/tiles/7.jpg');"></div><div class="caption"></div></div></li>
-                </ul>
+                <div class="swiper-container content-list carousel" id="storyList">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><div class="image" style="background-image: url('/assets/images/slides/1.jpg');"></div><div class="caption"><p>Water supply in Mali</p></div></div>
+                        <div class="swiper-slide"><div class="image" style="background-image: url('/assets/images/slides/2.jpg');"></div><div class="caption"><p>A longer captions that will necessitate wrapping over a couple of lines</p></div></div>
+                        <div class="swiper-slide"><div class="image" style="background-image: url('/assets/images/slides/3.jpg');"></div><div class="caption"></div></div>
+                        <div class="swiper-slide"><div class="image" style="background-image: url('/assets/images/slides/4.jpg');"></div><div class="caption"></div></div>
+                        <div class="swiper-slide"><div class="image" style="background-image: url('/assets/images/slides/5.jpg');"></div><div class="caption"></div></div>
+                        <div class="swiper-slide"><div class="image" style="background-image: url('/assets/images/slides/6.jpg');"></div><div class="caption"></div></div>
+                        <div class="swiper-slide"><div class="image" style="background-image: url('/assets/images/slides/7.jpg');"></div><div class="caption"></div></div>
+                    </div>
+                    <div class='slide-button slide-button-prev' href='#'><span class='fa fa-chevron-circle-left'></span></div>
+                    <div class='slide-button slide-button-next' href='#'><span class='fa fa-chevron-circle-right'></span></div>
+                </div>
             </div>
 
-            <div id="section-3" class="section padding">
+            <div id="section-3" class="section">
                 <h1>Approaches</h1>
-                <p>Insert 6 responsive tiles linked to work we've done in 2016</p>
+                <div id="approachesList">
+                    <div class="flip-container">
+                        <div class="flip">
+                            <div class="front" style="background-image: url('/assets/images/tiles/gender.jpg');"><h4>Front</h4></div>
+                            <div class="back"><h4>Back</h4></div>
+                        </div>
+                    </div>
+                    <div class="flip-container">
+                        <div class="flip">
+                            <div class="front" style="background-image: url('/assets/images/tiles/private-enterprise.jpg');"><h4>Front</h4></div>
+                            <div class="back"><h4>Back</h4></div>
+                        </div>
+                    </div>
+                    <div class="flip-container">
+                        <div class="flip">
+                            <div class="front" style="background-image: url('/assets/images/tiles/civil-society.jpg');"><h4>Front</h4></div>
+                            <div class="back"><h4>Back</h4></div>
+                        </div>
+                    </div>
+                    <div class="flip-container">
+                        <div class="flip">
+                            <div class="front"><h4>Front</h4></div>
+                            <div class="back"><h4>Back</h4></div>
+                        </div>
+                    </div>
+                    <div class="flip-container">
+                        <div class="flip">
+                            <div class="front"><h4>Front</h4></div>
+                            <div class="back"><h4>Back</h4></div>
+                        </div>
+                    </div>
+                    <div class="flip-container">
+                        <div class="flip">
+                            <div class="front"><h4>Front</h4></div>
+                            <div class="back"><h4>Back</h4></div>
+                        </div>
+                    </div>
+                </div>
             <div id="section-4" class="section fixed-width">
                 <h1>Subscribe</h1>
                 <form class="subscribe grid" id="subscribeForm" action="#section-4">
@@ -106,7 +147,7 @@
     <!-- Libraries First -->
 <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
 <script src="./assets/javascripts/libs/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
 <script src="assets/javascripts/libs/Chartjs/dist/Chart.bundle.js"></script>
 <script src="assets/javascripts/libs/spin/spin.min.js"></script>
@@ -119,6 +160,7 @@
 <script src="assets/data/regionData.js"></script>
 <script src="assets/javascripts/components/mapApp.js"></script>
 <script src="assets/javascripts/behaviours/carousel.js"></script>
+<script src="assets/javascripts/behaviours/flip_card.js"></script>
 <script src="//localhost:35729/livereload.js"></script> <!-- Development only -->
 </body>
 </html>

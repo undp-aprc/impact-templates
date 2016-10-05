@@ -22,3 +22,5 @@ var opts = {
 }
 var mapCtx = document.getElementById('map');
 var mapSpinner = new Spinner(opts).spin(mapCtx);
+var carouselCtx = document.getElementById('storyList');
+var carouselSpinner = new Spinner(opts).spin(carouselCtx);
