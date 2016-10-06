@@ -7702,7 +7702,7 @@ a.corner-ribbon.scrolled:hover {
   background-position: 50% 0%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 15em;
+  height: 10em;
   transition: all 1s linear;
 }
 @media screen and (min-width: 30em) {
@@ -7714,13 +7714,13 @@ a.corner-ribbon.scrolled:hover {
 @media screen and (min-width: 40em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
   .content-list.carousel .image {
-    height: 30em;
+    height: 10em;
   }
 }
 @media screen and (min-width: 52em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
   .content-list.carousel .image {
-    height: 40em;
+    height: 10em;
   }
 }
 @media screen and (min-width: 60em) {
@@ -7732,7 +7732,7 @@ a.corner-ribbon.scrolled:hover {
 @media screen and (min-width: 64em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
   .content-list.carousel .image {
-    height: 10em;
+    height: 8em;
   }
 }
 @media screen and (min-width: 75em) {
@@ -7847,6 +7847,65 @@ a.corner-ribbon.scrolled:hover {
   clear: both;
   content: "";
   display: block;
+}
+
+/* line 1, ../../../src/sass/components/_flip_card.scss */
+.flip-container {
+  perspective: 1000px;
+  flex: 100%;
+  padding: 1em;
+  height: 20em;
+}
+@media screen and (min-width: 40em) {
+  /* line 1, ../../../src/sass/components/_flip_card.scss */
+  .flip-container {
+    flex: 50%;
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 1, ../../../src/sass/components/_flip_card.scss */
+  .flip-container {
+    flex: 33%;
+    height: 40em;
+  }
+}
+/* line 13, ../../../src/sass/components/_flip_card.scss */
+.flip-container:hover .flip, .flip-container.active .flip {
+  transform: rotateY(180deg);
+}
+/* line 16, ../../../src/sass/components/_flip_card.scss */
+.flip-container .flip {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100%;
+}
+/* line 22, ../../../src/sass/components/_flip_card.scss */
+.flip-container .front {
+  background-color: #f9d3c3;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+/* line 27, ../../../src/sass/components/_flip_card.scss */
+.flip-container .back {
+  background-color: #bfd4ea;
+  transform: rotateY(180deg);
+}
+/* line 31, ../../../src/sass/components/_flip_card.scss */
+.flip-container .front, .flip-container .back {
+  background-size: cover;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 42, ../../../src/sass/components/_flip_card.scss */
+#approachesList {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */

@@ -9,28 +9,40 @@
             nextArrow:"<a class='slick-button slick-button-next' href='#'><span class='fa fa-chevron-circle-right'></span></a>",
             responsive: [
                 {
+
                     breakpoint: 960,
                     settings: {
-                        arrows: false,
                         centerMode: true,
+                        arrows: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        centerMode: true,
+                        arrows: false,
                         centerPadding: '40px',
                         slidesToShow: 1
                     }
-                },
+                }
             ]
         });
 
         var maxHeight = 0;
+        var caption = $('.caption');
 
-        $('.caption').each(function() {
+        caption.each(function() {
             var me = $(this);
             var height = me.height();
             maxHeight = height > maxHeight ? height : maxHeight;
         });
 
-        $('.caption').each(function() {
+        caption.each(function() {
             $(this).height(maxHeight);
-        })
+        });
+
 
     });
 })(jQuery);
