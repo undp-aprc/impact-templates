@@ -41,6 +41,7 @@
 
         caption.each(function() {
             $(this).height(maxHeight);
+            $(this).find('.sdgs').height(maxHeight * 0.25);
         });
 
 

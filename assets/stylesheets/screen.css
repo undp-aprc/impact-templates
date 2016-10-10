@@ -7215,11 +7215,6 @@ input.submit:hover {
   background-color: #009ed4;
 }
 
-/* line 8, ../../../src/sass/scaffold/_scaffold.scss */
-article {
-  padding: 1em 0;
-}
-
 /* line 12, ../../../src/sass/scaffold/_scaffold.scss */
 footer {
   height: 50vh;
@@ -7234,6 +7229,35 @@ footer {
 /* line 24, ../../../src/sass/scaffold/_scaffold.scss */
 .padding {
   padding: 1em;
+}
+
+/* line 28, ../../../src/sass/scaffold/_scaffold.scss */
+#section-2 {
+  background-color: rgba(103, 103, 104, 0.2);
+}
+
+/* line 33, ../../../src/sass/scaffold/_scaffold.scss */
+.gender .main-menu {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s linear;
+  padding: 0.5em 0;
+}
+/* line 38, ../../../src/sass/scaffold/_scaffold.scss */
+.gender .main-menu li {
+  width: 11%;
+}
+/* line 40, ../../../src/sass/scaffold/_scaffold.scss */
+.gender .main-menu li .icon {
+  height: 5em;
+  margin-bottom: 0.5em;
+}
+/* line 47, ../../../src/sass/scaffold/_scaffold.scss */
+.gender .main-menu.scrolled p {
+  display: none;
+}
+/* line 51, ../../../src/sass/scaffold/_scaffold.scss */
+.gender .topic-header {
+  background-color: #dfedf9;
 }
 
 /* line 1, ../../../src/sass/components/_main_menu.scss */
@@ -7284,8 +7308,14 @@ footer {
 }
 /* line 36, ../../../src/sass/components/_main_menu.scss */
 .main-menu li {
-  flex: 1;
   text-align: center;
+  padding: 0 1em;
+  font-size: 0.5em;
+}
+/* line 40, ../../../src/sass/components/_main_menu.scss */
+.main-menu li .icon {
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* line 1, ../../../src/sass/components/_hero.scss */
@@ -7294,7 +7324,7 @@ footer {
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 414px;
+  height: 26em;
   max-height: 100vh;
   width: 100%;
 }
@@ -7362,36 +7392,40 @@ footer {
   background-position: 50% 0px;
   background-size: auto;
 }
+/* line 61, ../../../src/sass/components/_hero.scss */
+.hero .bg-img.svg {
+  background-size: 120%;
+}
 @media screen and (min-width: 75em) {
   /* line 50, ../../../src/sass/components/_hero.scss */
   .hero .bg-img {
     background-size: 150%;
   }
 }
-/* line 65, ../../../src/sass/components/_hero.scss */
+/* line 68, ../../../src/sass/components/_hero.scss */
 .hero .heading {
   padding: 3em 0 0 0;
   width: 100%;
 }
-/* line 68, ../../../src/sass/components/_hero.scss */
+/* line 71, ../../../src/sass/components/_hero.scss */
 .hero .heading h1 {
   font-size: 1.25em;
 }
-/* line 71, ../../../src/sass/components/_hero.scss */
+/* line 74, ../../../src/sass/components/_hero.scss */
 .hero .heading h2 {
   font-size: 1.95313em;
 }
 @media screen and (min-width: 40em) {
-  /* line 75, ../../../src/sass/components/_hero.scss */
+  /* line 78, ../../../src/sass/components/_hero.scss */
   .hero .heading h1 {
     font-size: 1.95313em;
   }
-  /* line 78, ../../../src/sass/components/_hero.scss */
+  /* line 81, ../../../src/sass/components/_hero.scss */
   .hero .heading h2 {
     font-size: 3.05176em;
   }
 }
-/* line 83, ../../../src/sass/components/_hero.scss */
+/* line 86, ../../../src/sass/components/_hero.scss */
 .hero h1, .hero h2 {
   color: white;
   text-align: center;
@@ -7697,6 +7731,9 @@ a.corner-ribbon.scrolled:hover {
 
 /* line 2, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .image {
+  position: relative;
+  display: flex;
+  justify-content: center;
   background-color: #272727;
   background-size: cover;
   background-position: 50% 0%;
@@ -7704,6 +7741,28 @@ a.corner-ribbon.scrolled:hover {
   width: 100%;
   height: 10em;
   transition: all 1s linear;
+}
+/* line 6, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .image .sdgs {
+  position: absolute;
+  bottom: 0;
+  height: 25%;
+  display: flex;
+  opacity: 0.3;
+  transition: opacity 0.5s linear;
+  flex-direction: row;
+}
+/* line 15, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .image .sdgs li {
+  padding: 0;
+}
+/* line 17, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .image .sdgs li img {
+  max-height: 100%;
+}
+/* line 21, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .image .sdgs:hover {
+  opacity: 1;
 }
 @media screen and (min-width: 30em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
@@ -7747,52 +7806,57 @@ a.corner-ribbon.scrolled:hover {
     height: 10em;
   }
 }
-/* line 33, ../../../src/sass/components/_carousel.scss */
+/* line 57, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .caption {
-  min-height: 5em;
   background-color: white;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/debut_light.png"), linear-gradient(0, #fff, #fff), center no-repeat #fff scroll;
   border-radius: 0 0 3px 3px;
   text-align: center;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 40, ../../../src/sass/components/_carousel.scss */
-.content-list.carousel .caption p {
-  padding: 1em 0;
-  margin-bottom: 0;
+/* line 63, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .caption img {
+  height: 100%;
+  width: auto;
 }
-/* line 45, ../../../src/sass/components/_carousel.scss */
+/* line 67, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .caption p {
+  padding: 1em 0.5em;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+/* line 73, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel li {
   padding: 0 0.5em;
 }
-/* line 48, ../../../src/sass/components/_carousel.scss */
+/* line 76, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel li .image {
   filter: grayscale(100%);
   opacity: 0.5;
 }
-/* line 54, ../../../src/sass/components/_carousel.scss */
+/* line 82, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel li.slick-current .image {
   filter: none;
   opacity: 1;
 }
 
-/* line 61, ../../../src/sass/components/_carousel.scss */
+/* line 90, ../../../src/sass/components/_carousel.scss */
 #storyList {
   position: relative;
 }
-/* line 63, ../../../src/sass/components/_carousel.scss */
+/* line 92, ../../../src/sass/components/_carousel.scss */
 #storyList .slick-button {
   position: absolute;
   top: 30%;
-  font-size: 5em;
+  font-size: 3em;
   color: rgba(255, 255, 255, 0.8);
   z-index: 1000;
 }
-/* line 70, ../../../src/sass/components/_carousel.scss */
+/* line 99, ../../../src/sass/components/_carousel.scss */
 #storyList .slick-button-next {
   right: 1.5rem;
 }
-/* line 73, ../../../src/sass/components/_carousel.scss */
+/* line 102, ../../../src/sass/components/_carousel.scss */
 #storyList .slick-button-prev {
   left: 1.5rem;
 }
@@ -7820,7 +7884,7 @@ a.corner-ribbon.scrolled:hover {
   position: absolute;
   top: 50%;
   z-index: 1000;
-  font-size: 5em;
+  font-size: 3em;
 }
 /* line 21, ../../../src/sass/components/_horzontal_slides.scss */
 .horizontal-slides .swiper-container .slide-button.next {
@@ -7840,6 +7904,10 @@ a.corner-ribbon.scrolled:hover {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: top center;
+}
+/* line 40, ../../../src/sass/components/_horzontal_slides.scss */
+.horizontal-slides .swiper-slide {
+  box-sizing: border-box;
 }
 
 /* line 20, ../../../src/sass/libraries/neat/mixins/_clearfix.scss */
@@ -7866,32 +7934,34 @@ a.corner-ribbon.scrolled:hover {
   /* line 1, ../../../src/sass/components/_flip_card.scss */
   .flip-container {
     flex: 33%;
-    height: 40em;
+    height: 15em;
   }
 }
-/* line 13, ../../../src/sass/components/_flip_card.scss */
+/* line 14, ../../../src/sass/components/_flip_card.scss */
 .flip-container:hover .flip, .flip-container.active .flip {
   transform: rotateY(180deg);
 }
-/* line 16, ../../../src/sass/components/_flip_card.scss */
+/* line 17, ../../../src/sass/components/_flip_card.scss */
 .flip-container .flip {
+  perspective: 1000px;
   transition: 0.5s;
   transform-style: preserve-3d;
   position: relative;
   height: 100%;
+  text-align: center;
 }
-/* line 22, ../../../src/sass/components/_flip_card.scss */
+/* line 25, ../../../src/sass/components/_flip_card.scss */
 .flip-container .front {
   background-color: #f9d3c3;
   z-index: 2;
   transform: rotateY(0deg);
 }
-/* line 27, ../../../src/sass/components/_flip_card.scss */
+/* line 30, ../../../src/sass/components/_flip_card.scss */
 .flip-container .back {
   background-color: #bfd4ea;
   transform: rotateY(180deg);
 }
-/* line 31, ../../../src/sass/components/_flip_card.scss */
+/* line 34, ../../../src/sass/components/_flip_card.scss */
 .flip-container .front, .flip-container .back {
   background-size: cover;
   backface-visibility: hidden;
@@ -7900,12 +7970,127 @@ a.corner-ribbon.scrolled:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 1em;
 }
 
-/* line 42, ../../../src/sass/components/_flip_card.scss */
+/* line 46, ../../../src/sass/components/_flip_card.scss */
 #approachesList {
   display: flex;
   flex-flow: row wrap;
+}
+
+/* line 2, ../../../src/sass/components/_topic_page_content.scss */
+.topic-content-wrapper .topic-header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 1em;
+  background-color: #dfedf9;
+}
+
+/* line 1, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  padding: 0;
+}
+/* line 20, ../../../src/sass/libraries/neat/mixins/_clearfix.scss */
+.accordion-tabs::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  /* line 1, ../../../src/sass/components/_tabs.scss */
+  .accordion-tabs {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+}
+/* line 27, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs .tab-header-and-content {
+  list-style: none;
+}
+@media screen and (min-width: 600px) {
+  /* line 27, ../../../src/sass/components/_tabs.scss */
+  .accordion-tabs .tab-header-and-content {
+    display: inline;
+  }
+}
+/* line 34, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs .tab-header-and-content:first-child .tab-link {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+@media screen and (max-width: 600px) {
+  /* line 34, ../../../src/sass/components/_tabs.scss */
+  .accordion-tabs .tab-header-and-content:first-child .tab-link {
+    border-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 43, ../../../src/sass/components/_tabs.scss */
+  .accordion-tabs .tab-header-and-content:last-child .tab-link {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+/* line 51, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs .tab-link {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  color: #333;
+  display: block;
+  font-weight: bold;
+  padding: 0.75em 0.809em;
+  text-decoration: none;
+}
+@media screen and (min-width: 600px) {
+  /* line 51, ../../../src/sass/components/_tabs.scss */
+  .accordion-tabs .tab-link {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top: 0;
+    display: inline-block;
+  }
+}
+/* line 66, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs .tab-link:hover {
+  color: #1565c0;
+}
+/* line 70, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs .tab-link:focus {
+  outline: none;
+}
+/* line 74, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs .tab-link.is-active {
+  background-color: #f7f7f7;
+}
+@media screen and (min-width: 600px) {
+  /* line 74, ../../../src/sass/components/_tabs.scss */
+  .accordion-tabs .tab-link.is-active {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-bottom-color: #f7f7f7;
+    margin-bottom: -1px;
+  }
+}
+/* line 86, ../../../src/sass/components/_tabs.scss */
+.accordion-tabs .tab-content {
+  background: #f7f7f7;
+  display: none;
+  padding: 1.5em 1.618em;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  /* line 86, ../../../src/sass/components/_tabs.scss */
+  .accordion-tabs .tab-content {
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    float: left;
+  }
 }
 
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */
