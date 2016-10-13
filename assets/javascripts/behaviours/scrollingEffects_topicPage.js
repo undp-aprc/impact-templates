@@ -13,15 +13,15 @@
             .setPin('#topicNavigation')
             .addTo(controller);*/
 
-       /* var menuBehaviour = new ScrollMagic.Scene({
-            triggerElement: '.#topicHeader',
+       var menuBehaviour = new ScrollMagic.Scene({
+            triggerElement: '#topicHeader',
             offset: (menuHeight * -1) +1,
             triggerHook: 0,
             loglevel: 0,
         })
             .setPin('#topicHeader')
             .setClassToggle('#topicHeader','scrolled')
-            .addTo(controller);*/
+            .addTo(controller);
 
     });
 })(jQuery);
