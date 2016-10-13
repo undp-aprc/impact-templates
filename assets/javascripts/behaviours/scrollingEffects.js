@@ -12,6 +12,7 @@
             .setClassToggle('#mainMenu','scrolled')
             .addTo(controller);
 
+
         var ribbonBehaviour = new ScrollMagic.Scene({
             triggerElement: '#mainMenu',
             triggerHook: 0,
@@ -29,6 +30,7 @@
         })
             .setClassToggle('#goToTop','scrolled')
             .addTo(controller);
+
     });
 
     /* Functions using the appear jquery plugin */

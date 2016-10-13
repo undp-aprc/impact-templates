@@ -3,7 +3,7 @@ function Parallax() {
     $('#hero-bg').css({
         'background-position' : '50% ' + (-scrollPos/8)+"px"
     });
-    $('#header').css({
+    $('#page-header').css({
         'margin-top': (scrollPos/4)+"px",
         'opacity': 1-(scrollPos/250)
     });

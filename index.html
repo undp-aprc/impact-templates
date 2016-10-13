@@ -12,27 +12,27 @@
 </head>
 <body class="landing-page impact front">
     <div id="pageTop"></div>
-    <div class="wrapper">
+    <div class="page-wrapper">
         <a href="#section-4" class="corner-ribbon scroll-on-page-link" id="subscriptionRibbon">subscribe</a>
         <div class="hero">
-            <div id="header" class="mobile">
+            <div class="flex-wrapper page-header" id="page-header">
                 <div class="logos">
                     <ul>
                         <li><a href="http://adaptation-undp.org" target="_blank"><img src="/assets/images/logos/cca.svg" /></a></li>
                         <li><a href="http://undp.org" target="_blank"><img src="/assets/images/logos/undp.svg" /></a></li>
                     </ul>
                 </div>
-                <div class="heading">
-                    <h1>UNDP Climate Change Adaptation</h1>
-                    <h2>Impacts 2016</h2>
-                </div>
+                <h2>Impacts 2016</h2>
             </div>
-            <ul class="main-menu" id="mainMenu" role="navigation">
-                <li><a class="scroll-on-page-link" href="#pageTop">Home</a></li>
-                <li><a class="scroll-on-page-link" href="#section-1">UNDP CCA </a></li>
-                <li><a class="scroll-on-page-link" href="#section-2">Impact Stories </a></li>
-                <li><a class="scroll-on-page-link" href="#section-3">Our Approaches </a></li>
-            </ul>
+            <div class="main-menu" id="mainMenu" role="navigation">
+                <div class="menu-toggle" id="menuToggle"><span class="fa fa-bars"></span></div>
+                <ul class="items">
+                    <li><a class="scroll-on-page-link" href="#pageTop">Home</a></li>
+                    <li><a class="scroll-on-page-link" href="#section-1">UNDP CCA </a></li>
+                    <li><a class="scroll-on-page-link" href="#section-2">Impact Stories </a></li>
+                    <li><a class="scroll-on-page-link" href="#section-3">Our Approaches </a></li>
+                </ul>
+            </div>
             <div class="gradient"></div>
             <div class="bg-img" id="hero-bg" style="background-image: url('assets/images/photos/hero-home.jpg');"></div>
         </div>
@@ -187,7 +187,8 @@
 <script src="assets/javascripts/libs/spin/spin.min.js"></script>
 
     <!-- Site Behaviours -->
-<script src="./assets/javascripts/behaviours/scrollingEffects.js"></script>
+<script src="/assets/javascripts/behaviours/menuCtrl.js"></script>
+<script src="/assets/javascripts/behaviours/scrollingEffects.js"></script>
 <script src="assets/javascripts/behaviours/scrollOnPage.js"></script>
 <script src="assets/javascripts/behaviours/parallax.js"></script>
 <script src="assets/javascripts/behaviours/spinnerCtrl.js"></script>

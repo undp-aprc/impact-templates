@@ -10,99 +10,101 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/stylesheets/screen.css" media="screen" />
 </head>
-<body class="site horizontal-slides gender topic-page nutritional-security">
+<body class="site horizontal-slides gender topic-page nutritional-security mobile">
 <div id="pageTop"></div>
-<div class="wrapper">
-    <div class="hero">
-        <div id="header" class="mobile">
-            <div class="logos">
-                <ul>
-                    <li><a href="http://adaptation-undp.org" target="_blank"><img src="/assets/images/logos/cca.svg" /></a></li>
-                    <li><a href="http://undp.org" target="_blank"><img src="/assets/images/logos/undp.svg" /></a></li>
-                </ul>
-            </div>
-            <div class="heading">
-                <h1>Gender Impacts</h1>
-            </div>
-            <div class="partner-logos">
-                <p>In partnership with:</p>
-                <img src="/assets/images/logos/ccaf.png" />
+<div class="page-wrapper">
+    <div class="hero" id="hero">
+        <div id="header">
+            <h3 class="theme-title">Gender Impacts</h3>
+            <div class="flex-wrapper page-header" id="page-header">
+                <div class="logos">
+                    <ul>
+                        <li><a href="http://adaptation-undp.org" target="_blank"><img src="/assets/images/logos/cca.svg" /></a></li>
+                        <li><a href="http://undp.org" target="_blank"><img src="/assets/images/logos/undp.svg" /></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <ul class="main-menu" id="mainMenu" role="navigation">
-            <li>
-                <a href="#">
-                    <div class="icon"></div>
-                    <p>About</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon"></div>
-                    <p>Home</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-01.svg');"></div>
-                    <p>Food and Nutritional Security</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-02.svg');"></div>
-                    <p>Water</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-03.svg');"></div>
-                    <p>Time Poverty</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-04.svg');"></div>
-                    <p>Access to resources</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-05.svg');"></div>
-                    <p>Leadership</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-06.svg');"></div>
-                    <p>Groups at risk</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-07.svg');"></div>
-                    <p>Institutional Partnerships</p>
-                </a>
-            </li>
-        </ul>
+        <div class="main-menu" id="mainMenu" role="navigation">
+            <div class="menu-toggle" id="menuToggle"><span class="fa fa-bars"></span></div>
+            <ul class="items">
+                <li>
+                    <a href="#">
+                        <div class="icon"></div>
+                        <p>About</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"></div>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <div class="icon"></div>
+                        <p>Food and Nutritional Security</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-02.svg');"></div>
+                        <p>Water</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-03.svg');"></div>
+                        <p>Time Poverty</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-04.svg');"></div>
+                        <p>Access to resources</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-05.svg');"></div>
+                        <p>Leadership</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon" style="background-image: url('/assets/images/themes/gender/icons/topic-grey-06.svg');"></div>
+                        <p>Groups at risk</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon"></div>
+                        <p>Institutional Partnerships</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
         <div class="gradient"></div>
         <div class="bg-img" id="hero-bg" style="background-image: url('/assets/images/photos/gender-theme-nutrition-v2.jpg');"></div>
     </div>
     <article id="topicContent" class="topic-content-wrapper">
-        <div class="section topic-header">
-            <!--<div class="icon" style="height:20em; width:20em; background-image: url('/assets/images/themes/gender/icons/circle-test.svg');"></div>-->
-            <h1>Food and Nutritional Security</h1>
+        <div class="section topic-header" id="topicHeader">
+            <h2>Food and Nutritional Security</h2>
             <p>A significant implication of climate change and the resulting decline in agricultural production and food security in many parts of the world is that women are playing an increasingly important role in provisioning food for the family.</p>
-            <ul class="topic-navigation">
-                <li><a href="#slide1" data-index="0">Lessons Learnt</a></li>
-                <li><a href="#slide2" data-index="1">Security for increasing food production and provisioning</a></li>
-                <li><a href="#slide3" data-index="2">Diversifying livelihood options</a></li>
-                <li><a href="#slide4" data-index="3">Transforming social norms in food production</a></li>
-            </ul>
+            <div class="topic-navigation" id="topicNavigation">
+                <ul >
+                    <li><a href="#slide1" data-index="0"><img src="/assets/images/themes/gender/icons/lessons-learnt.svg" /></a></li>
+                    <li><a href="#slide2" data-index="1"><img src="/assets/images/themes/gender/food-security-01.svg" /></a></li>
+                    <li><a href="#slide3" data-index="2"><img src="/assets/images/themes/gender/food-security-02.svg" /></a></li>
+                    <li><a href="#slide4" data-index="3"><img src="/assets/images/themes/gender/food-security-03.svg" /></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="swiper-container">
+        <!--<div class="icon" style="height:20em; width:20em; background-image: url('/assets/images/themes/gender/icons/circle-test.svg');"></div>-->
+
+        <div class="swiper-container" id="swiperContainer">
             <div class="parallax-bg" style="background-image:url('/assets/images/themes/gender/bg.svg')" data-swiper-parallax="-23%"></div>
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" id="swiperWrapper">
                 <div class="swiper-slide" data-hash="slide1">
                     <h3 class="title" data-swiper-parallax="-100">Lessons Learnt</h3>
                     <div class="text" data-swiper-parallax="-300">
@@ -162,6 +164,7 @@
 <script src="/assets/javascripts/libs/spin/spin.min.js"></script>
 
 <!-- Site Behaviours -->
+<script src="/assets/javascripts/behaviours/menuCtrl.js"></script>
 <script src="/assets/javascripts/behaviours/scrollingEffects.js"></script>
 <script src="/assets/javascripts/behaviours/scrollingEffects_topicPage.js"></script>
 <script src="/assets/javascripts/behaviours/scrollOnPage.js"></script>
