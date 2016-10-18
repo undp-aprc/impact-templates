@@ -5,7 +5,7 @@
 
         var controller = new ScrollMagic.Controller();
 
-        var topicNav = new ScrollMagic.Scene({
+        /*var topicNav = new ScrollMagic.Scene({
             triggerElement: '#topicContent',
             triggerHook: 0,
             loglevel: 0,
@@ -14,7 +14,7 @@
         })
             .setPin('#topicContent')
             .setClassToggle('#topicContent','scrolled')
-            .addTo(controller);
+            .addTo(controller);*/
 
         var slideScroll = new ScrollMagic.Scene({
             triggerElement: '#topicContent',
