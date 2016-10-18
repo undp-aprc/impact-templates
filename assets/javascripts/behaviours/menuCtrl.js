@@ -1,10 +1,16 @@
 (function($) {
     $(document).ready(function() {
-        $('#menuToggle').on('touchstart', function(e) {
-            $(this).parent('.main-menu').toggleClass('active');
+        $('#menuToggle').on('touchstart click', function(e) {
+            $('#mainMenuBar').toggleClass('active');
+            $('#menuToggle').toggleClass('active');
+            $('#menuPanel').toggleClass('active');
+            return false;
         });
-        $('.main-menu li').on('touchstart', function(e) {
-            $(this).parents('.main-menu').removeClass('active');
+        $('.main-menu-bar li').on('touchstart click', function(e) {
+            $('#mainMenuBar').removeClass('active');
+            $('#menuToggle').removeClass('active');
+            //$('#menuPanel').removeClass('active');
+            return false;
         })
     });
 })(jQuery);

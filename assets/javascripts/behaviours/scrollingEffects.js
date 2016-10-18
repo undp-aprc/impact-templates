@@ -3,18 +3,18 @@
         var controller = new ScrollMagic.Controller();
 
         var menuBehaviour = new ScrollMagic.Scene({
-            triggerElement: '#mainMenu',
+            triggerElement: '#mainMenuBar',
             triggerHook: 0,
             loglevel: 0,
             offset: 1
         })
-            .setPin('#mainMenu')
-            .setClassToggle('#mainMenu','scrolled')
+            .setPin('#mainMenuBar')
+            .setClassToggle('#mainMenuBar','scrolled')
             .addTo(controller);
 
 
         var ribbonBehaviour = new ScrollMagic.Scene({
-            triggerElement: '#mainMenu',
+            triggerElement: '#mainMenuBar',
             triggerHook: 0,
             loglevel: 0,
             offset: 1
@@ -23,7 +23,7 @@
             .addTo(controller);
 
         var scrollToTop = new ScrollMagic.Scene({
-            triggerElement: '#mainMenu',
+            triggerElement: '#mainMenuBar',
             triggerHook: 0,
             loglevel: 0,
             offset: 1
