@@ -7492,8 +7492,9 @@ a.corner-ribbon.scrolled:hover {
   opacity: 0;
   transition: all 0.2s linear;
   color: rgba(230, 231, 232, 0.3);
+  z-index: 5000;
 }
-/* line 12, ../../../src/sass/components/_goToTop.scss */
+/* line 13, ../../../src/sass/components/_goToTop.scss */
 #goToTop .fa {
   padding: 0.5em 0;
   text-align: center;
@@ -7501,11 +7502,11 @@ a.corner-ribbon.scrolled:hover {
   background-color: #a6a7a8;
   border-radius: 3px;
 }
-/* line 19, ../../../src/sass/components/_goToTop.scss */
+/* line 20, ../../../src/sass/components/_goToTop.scss */
 #goToTop.scrolled {
   opacity: 0.3;
 }
-/* line 22, ../../../src/sass/components/_goToTop.scss */
+/* line 23, ../../../src/sass/components/_goToTop.scss */
 #goToTop:hover {
   opacity: 1;
 }
@@ -7978,7 +7979,8 @@ a.corner-ribbon.scrolled:hover {
   flex-direction: column;
   justify-content: center;
   background-color: #0055aa;
-  padding: 1em;
+  background-image: url("/assets/images/ui/seigaiha.png");
+  background-attachment: fixed;
 }
 /* line 16, ../../../src/sass/components/_topic_page.scss */
 .topic-header h1, .topic-header h2, .topic-header h3, .topic-header h4, .topic-header h5, .topic-header h6, .topic-header p {
@@ -7987,88 +7989,120 @@ a.corner-ribbon.scrolled:hover {
 }
 /* line 20, ../../../src/sass/components/_topic_page.scss */
 .topic-header p {
+  margin-top: 1em;
   font-size: 1.95313em;
+  padding: 0 1em;
 }
 
-/* line 27, ../../../src/sass/components/_topic_page.scss */
+/* line 30, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation {
-  background-color: #80cfea;
+  position: relative;
 }
-/* line 29, ../../../src/sass/components/_topic_page.scss */
+/* line 33, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
 }
-/* line 35, ../../../src/sass/components/_topic_page.scss */
+/* line 39, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li {
   flex-grow: 1;
   flex-basis: 0;
-  padding: 1em;
   background-image: url("/assets/images/ui/arrow-up-inactive.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 120%;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  background-color: #80cfea;
+  padding: 1em 0;
 }
-/* line 43, ../../../src/sass/components/_topic_page.scss */
-.topic-navigation li.active {
-  background-image: url("/assets/images/ui/arrow-up.svg");
-}
-/* line 47, ../../../src/sass/components/_topic_page.scss */
+/* line 51, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-/* line 52, ../../../src/sass/components/_topic_page.scss */
+/* line 56, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li p {
   text-align: center;
   font-size: 0.5em;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 57, ../../../src/sass/components/_topic_page.scss */
+/* line 61, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li img {
   height: 3em;
 }
+/* line 64, ../../../src/sass/components/_topic_page.scss */
+.topic-navigation li.active a::after {
+  display: block;
+  background-image: url("/assets/images/ui/arrow-up.svg");
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: top center;
+  position: absolute;
+  bottom: -99px;
+  content: '';
+  width: 100%;
+  height: 100px;
+}
 
-/* line 69, ../../../src/sass/components/_topic_page.scss */
+/* line 85, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li {
   display: flex;
   flex-direction: row;
   margin-bottom: 2em;
 }
-/* line 73, ../../../src/sass/components/_topic_page.scss */
+/* line 89, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li p, .lessons-learnt li img {
   align-self: center;
   margin: 0;
 }
-/* line 77, ../../../src/sass/components/_topic_page.scss */
+/* line 93, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li p {
   padding-right: 1em;
   flex: 4;
   color: #272727;
 }
-/* line 82, ../../../src/sass/components/_topic_page.scss */
+/* line 98, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li img {
   flex: 1;
 }
-/* line 86, ../../../src/sass/components/_topic_page.scss */
+/* line 102, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt .align-right {
   flex-direction: row-reverse;
 }
-/* line 88, ../../../src/sass/components/_topic_page.scss */
+/* line 104, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt .align-right p {
   padding-right: 0;
   padding-left: 1em;
 }
 
-/* line 95, ../../../src/sass/components/_topic_page.scss */
+/* line 111, ../../../src/sass/components/_topic_page.scss */
 .highlight-text {
   text-align: center;
 }
 
-/* line 100, ../../../src/sass/components/_topic_page.scss */
+/* line 116, ../../../src/sass/components/_topic_page.scss */
+.swiper-container .swiper-button {
+  position: absolute;
+  top: 20%;
+  font-size: 3em;
+  color: white;
+  z-index: 1000;
+}
+/* line 123, ../../../src/sass/components/_topic_page.scss */
+.swiper-container .button-next {
+  right: 1rem;
+}
+/* line 126, ../../../src/sass/components/_topic_page.scss */
+.swiper-container .button-prev {
+  left: 1rem;
+}
+
+/* line 132, ../../../src/sass/components/_topic_page.scss */
 .swiper-container-sub-01 .swiper-slide {
   width: 25%;
   height: 10em;
@@ -8083,11 +8117,11 @@ a.corner-ribbon.scrolled:hover {
   filter: grayscale(100%);
   transition: filter 0.5s linear;
 }
-/* line 113, ../../../src/sass/components/_topic_page.scss */
+/* line 145, ../../../src/sass/components/_topic_page.scss */
 .swiper-container-sub-01 .swiper-slide.swiper-slide-active {
   filter: grayscale(0%);
 }
-/* line 116, ../../../src/sass/components/_topic_page.scss */
+/* line 148, ../../../src/sass/components/_topic_page.scss */
 .swiper-container-sub-01 .swiper-slide .label {
   text-align: center;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
@@ -8095,24 +8129,41 @@ a.corner-ribbon.scrolled:hover {
   padding: 0.5em;
 }
 
-/* line 125, ../../../src/sass/components/_topic_page.scss */
-.dynamic-content-container {
-  padding: 1em;
-}
-/* line 127, ../../../src/sass/components/_topic_page.scss */
+/* line 158, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .flex-wrapper {
-  display: flex;
+  display: block;
 }
-/* line 130, ../../../src/sass/components/_topic_page.scss */
-.dynamic-content-container .highlight-text {
+@media screen and (min-width: 40em) {
+  /* line 158, ../../../src/sass/components/_topic_page.scss */
+  .dynamic-content-container .flex-wrapper {
+    display: flex;
+  }
+}
+/* line 164, ../../../src/sass/components/_topic_page.scss */
+.dynamic-content-container .side {
+  display: none;
   flex: 3;
   padding-right: 1em;
+  padding-top: 2.25em;
+}
+@media screen and (min-width: 40em) {
+  /* line 164, ../../../src/sass/components/_topic_page.scss */
+  .dynamic-content-container .side {
+    display: block;
+  }
+}
+/* line 173, ../../../src/sass/components/_topic_page.scss */
+.dynamic-content-container .side p {
   font-style: italic;
   color: #80aad4;
 }
-/* line 136, ../../../src/sass/components/_topic_page.scss */
-.dynamic-content-container .main-text {
+/* line 178, ../../../src/sass/components/_topic_page.scss */
+.dynamic-content-container .main {
   flex: 9;
+}
+/* line 180, ../../../src/sass/components/_topic_page.scss */
+.dynamic-content-container .main h1, .dynamic-content-container .main h2, .dynamic-content-container .main h3, .dynamic-content-container .main h4, .dynamic-content-container .main h5, .dynamic-content-container .main h6 {
+  text-align: left;
 }
 
 /* line 1, ../../../src/sass/components/_tabs.scss */
@@ -8289,6 +8340,23 @@ footer .partner-logos p {
 .parallax__layer--back {
   transform: translateZ(-1px) scale(2);
   background-size: 50%;
+}
+
+/* line 1, ../../../src/sass/components/_carousel_navigator.scss */
+.carousel-navigator {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1em;
+}
+/* line 4, ../../../src/sass/components/_carousel_navigator.scss */
+.carousel-navigator h5 {
+  background-color: rgba(128, 207, 234, 0.8);
+  padding: 0.5em;
+  text-transform: uppercase;
+  color: white;
+}
+/* line 10, ../../../src/sass/components/_carousel_navigator.scss */
+.carousel-navigator .swiper-container {
+  margin-bottom: 1em;
 }
 
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */

@@ -1,7 +1,10 @@
 var swiper = new Swiper('.swiper-container-main', {
     parallax: true,
     speed: 600,
-    hashnav: true
+    hashnav: true,
+    paginationBulletRender: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+    }
 });
 
 var content = [
@@ -40,6 +43,9 @@ var subtopic01 = new Swiper('.swiper-container-sub-01', {
     spaceBetween:10,
     slidesPerView: 4,
     loop: true,
+    slideToClickedSlide: true,
+    nextButton: '.button-next',
+    prevButton: '.button-prev',
     breakpoints: {
           640: {
               slidesPerView: 1
@@ -48,7 +54,7 @@ var subtopic01 = new Swiper('.swiper-container-sub-01', {
     onInit: function(e) {
         var realIndex = e.slides.eq(e.activeIndex).attr('data-swiper-slide-index');
         console.log(content[realIndex]);
-        $('#dynamicContentContainer').children('.title').html(content[realIndex].title);
+        $('#dynamicContentContainer').find('.title').html(content[realIndex].title);
         $('#dynamicContentContainer').find('.highlight-text').html(content[realIndex].highlightText);
         $('#dynamicContentContainer').find('.main-text').html(content[realIndex].mainText);
     }
@@ -56,7 +62,7 @@ var subtopic01 = new Swiper('.swiper-container-sub-01', {
 
 subtopic01.on('slideChangeEnd', function(e) {
     var realIndex = e.slides.eq(e.activeIndex).attr('data-swiper-slide-index');
-    $('#dynamicContentContainer').children('.title').html(content[realIndex].title);
+    $('#dynamicContentContainer').find('.title').html(content[realIndex].title);
     $('#dynamicContentContainer').find('.highlight-text').html(content[realIndex].highlightText);
     $('#dynamicContentContainer').find('.main-text').html(content[realIndex].mainText);
 });
