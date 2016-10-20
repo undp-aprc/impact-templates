@@ -7716,7 +7716,8 @@ a.corner-ribbon.scrolled:hover {
 .content-list.carousel .image {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  flex-direction: column;
   background-color: #272727;
   background-size: cover;
   background-position: 50% 0%;
@@ -7725,7 +7726,18 @@ a.corner-ribbon.scrolled:hover {
   height: 10em;
   transition: all 1s linear;
 }
-/* line 6, ../../../src/sass/components/_carousel.scss */
+/* line 7, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .image .view-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 0;
+  padding: 0 0.2rem;
+  transition: all 0.2s linear;
+}
+/* line 17, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .image .sdgs {
   position: absolute;
   bottom: 0;
@@ -7736,18 +7748,23 @@ a.corner-ribbon.scrolled:hover {
   flex-direction: row;
   justify-content: center;
 }
-/* line 15, ../../../src/sass/components/_carousel.scss */
+/* line 26, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .image .sdgs li {
   padding: 0;
   width: 25%;
 }
-/* line 18, ../../../src/sass/components/_carousel.scss */
+/* line 30, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .image .sdgs li img {
   max-height: 100%;
 }
-/* line 23, ../../../src/sass/components/_carousel.scss */
+/* line 35, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .image:hover .sdgs {
   opacity: 1;
+}
+/* line 38, ../../../src/sass/components/_carousel.scss */
+.content-list.carousel .image:hover .view-content {
+  font-size: 2.2em;
+  color: rgba(255, 255, 255, 0.8);
 }
 @media screen and (min-width: 30em) {
   /* line 2, ../../../src/sass/components/_carousel.scss */
@@ -7791,7 +7808,7 @@ a.corner-ribbon.scrolled:hover {
     height: 10em;
   }
 }
-/* line 57, ../../../src/sass/components/_carousel.scss */
+/* line 74, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .caption {
   background-color: white;
   background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/debut_light.png"), linear-gradient(0, #fff, #fff), center no-repeat #fff scroll;
@@ -7799,37 +7816,37 @@ a.corner-ribbon.scrolled:hover {
   text-align: center;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 63, ../../../src/sass/components/_carousel.scss */
+/* line 80, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .caption img {
   height: 100%;
   width: auto;
 }
-/* line 67, ../../../src/sass/components/_carousel.scss */
+/* line 84, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel .caption p {
   padding: 1em 0.5em;
   margin-bottom: 0;
   font-size: 1rem;
 }
-/* line 73, ../../../src/sass/components/_carousel.scss */
+/* line 90, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel li {
   padding: 0 0.5em;
 }
-/* line 76, ../../../src/sass/components/_carousel.scss */
+/* line 93, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel li .image {
   filter: grayscale(100%);
   opacity: 0.5;
 }
-/* line 82, ../../../src/sass/components/_carousel.scss */
+/* line 99, ../../../src/sass/components/_carousel.scss */
 .content-list.carousel li.slick-current .image {
   filter: none;
   opacity: 1;
 }
 
-/* line 90, ../../../src/sass/components/_carousel.scss */
+/* line 107, ../../../src/sass/components/_carousel.scss */
 #storyList {
   position: relative;
 }
-/* line 92, ../../../src/sass/components/_carousel.scss */
+/* line 109, ../../../src/sass/components/_carousel.scss */
 #storyList .slick-button {
   position: absolute;
   top: 30%;
@@ -7837,11 +7854,11 @@ a.corner-ribbon.scrolled:hover {
   color: rgba(255, 255, 255, 0.8);
   z-index: 1000;
 }
-/* line 99, ../../../src/sass/components/_carousel.scss */
+/* line 116, ../../../src/sass/components/_carousel.scss */
 #storyList .slick-button-next {
   right: 1.5rem;
 }
-/* line 102, ../../../src/sass/components/_carousel.scss */
+/* line 119, ../../../src/sass/components/_carousel.scss */
 #storyList .slick-button-prev {
   left: 1.5rem;
 }
@@ -8152,16 +8169,16 @@ a.corner-ribbon.scrolled:hover {
     display: block;
   }
 }
-/* line 173, ../../../src/sass/components/_topic_page.scss */
+/* line 172, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .side p {
   font-style: italic;
   color: #80aad4;
 }
-/* line 178, ../../../src/sass/components/_topic_page.scss */
+/* line 177, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .main {
   flex: 9;
 }
-/* line 180, ../../../src/sass/components/_topic_page.scss */
+/* line 179, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .main h1, .dynamic-content-container .main h2, .dynamic-content-container .main h3, .dynamic-content-container .main h4, .dynamic-content-container .main h5, .dynamic-content-container .main h6 {
   text-align: left;
 }
@@ -8359,6 +8376,114 @@ footer .partner-logos p {
   margin-bottom: 1em;
 }
 
+/* line 1, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+/* line 10, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container.active {
+  display: block;
+}
+/* line 13, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container .lightbox-content-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 1em;
+}
+/* line 19, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  margin: 0 0.5em;
+}
+/* line 26, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container .sdgs {
+  padding: 1em;
+  background-color: #e6e7e8;
+}
+/* line 29, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container .sdgs p {
+  text-align: center;
+}
+/* line 32, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container .sdgs li {
+  max-width: 5em;
+}
+/* line 35, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container .sdgs p {
+  font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
+}
+/* line 39, ../../../src/sass/components/_lightbox.scss */
+.lightbox-container .content-box.text {
+  margin-top: 1em;
+}
+
+/* line 44, ../../../src/sass/components/_lightbox.scss */
+.lightbox-content-wrapper {
+  overflow-y: scroll;
+}
+/* line 46, ../../../src/sass/components/_lightbox.scss */
+.lightbox-content-wrapper .flex-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+/* line 49, ../../../src/sass/components/_lightbox.scss */
+.lightbox-content-wrapper .flex-wrapper .content-box.image {
+  order: 1;
+}
+/* line 52, ../../../src/sass/components/_lightbox.scss */
+.lightbox-content-wrapper .flex-wrapper .content-box.text {
+  order: 2;
+}
+/* line 55, ../../../src/sass/components/_lightbox.scss */
+.lightbox-content-wrapper .flex-wrapper .content-box.text .sdgs p {
+  margin-bottom: 1em;
+}
+/* line 58, ../../../src/sass/components/_lightbox.scss */
+.lightbox-content-wrapper .flex-wrapper .content-box.text .sdgs .flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 70, ../../../src/sass/components/_lightbox.scss */
+  .lightbox-content-wrapper .flex-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  /* line 73, ../../../src/sass/components/_lightbox.scss */
+  .lightbox-content-wrapper .flex-wrapper .content-box.text {
+    flex: 3;
+    order: 1;
+  }
+  /* line 76, ../../../src/sass/components/_lightbox.scss */
+  .lightbox-content-wrapper .flex-wrapper .content-box.text.flex-wrapper {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  /* line 82, ../../../src/sass/components/_lightbox.scss */
+  .lightbox-content-wrapper .flex-wrapper .content-box.text .sdgs .flex-wrapper {
+    flex-wrap: nowrap;
+  }
+  /* line 87, ../../../src/sass/components/_lightbox.scss */
+  .lightbox-content-wrapper .flex-wrapper .content-box.image {
+    flex: 2;
+    order: 2;
+    padding-left: 1em;
+  }
+}
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */
 .chart-legend {
   list-style: square;
