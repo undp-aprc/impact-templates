@@ -8120,7 +8120,7 @@ a.corner-ribbon.scrolled:hover {
 }
 
 /* line 132, ../../../src/sass/components/_topic_page.scss */
-.swiper-container-sub-01 .swiper-slide {
+.swiper-container.horizontal .swiper-slide {
   width: 25%;
   height: 10em;
   background: white;
@@ -8135,11 +8135,11 @@ a.corner-ribbon.scrolled:hover {
   transition: filter 0.5s linear;
 }
 /* line 145, ../../../src/sass/components/_topic_page.scss */
-.swiper-container-sub-01 .swiper-slide.swiper-slide-active {
+.swiper-container.horizontal .swiper-slide.swiper-slide-active {
   filter: grayscale(0%);
 }
 /* line 148, ../../../src/sass/components/_topic_page.scss */
-.swiper-container-sub-01 .swiper-slide .label {
+.swiper-container.horizontal .swiper-slide .label {
   text-align: center;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
   background-color: rgba(255, 255, 255, 0.8);
@@ -8484,6 +8484,84 @@ footer .partner-logos p {
     padding-left: 1em;
   }
 }
+/* line 2, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .swiper-slide {
+  height: 20em;
+}
+@media screen and (min-width: 40em) {
+  /* line 2, ../../../src/sass/components/_impact_stories.scss */
+  #impact-stories .swiper-slide {
+    height: 10em;
+  }
+}
+/* line 8, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 40em) {
+  /* line 8, ../../../src/sass/components/_impact_stories.scss */
+  #impact-stories .dynamic-content-container .flex-wrapper {
+    flex-direction: row;
+  }
+}
+/* line 14, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper p {
+  text-align: left;
+}
+/* line 17, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper .side {
+  padding: 0.5em;
+  background-color: rgba(230, 231, 232, 0.5);
+  order: 2;
+  display: flex;
+  flex-direction: column;
+}
+/* line 23, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper .side .sdg-tiles.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+/* line 28, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper .side .sdg-tiles.flex-wrapper li {
+  flex: 50%;
+  flex-grow: 0;
+}
+/* line 33, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper .side h6 {
+  font-size: 0.5em;
+  color: #676768;
+  font-style: normal;
+  margin-bottom: 1em;
+}
+/* line 40, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper .main {
+  order: 1;
+}
+/* line 43, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper p.learn-more {
+  font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
+  background-color: rgba(166, 167, 168, 0.5);
+  padding: 0.5em;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 0;
+}
+/* line 52, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper p.learn-more a {
+  display: inline-block;
+  color: #676768;
+  text-align: center;
+}
+/* line 56, ../../../src/sass/components/_impact_stories.scss */
+#impact-stories .dynamic-content-container .flex-wrapper p.learn-more a .fa {
+  color: #a6a7a8;
+}
+
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */
 .chart-legend {
   list-style: square;
