@@ -1,16 +1,6 @@
 (function($) {
     $(document).ready(function(e){
-        var updateProjectTotal = function (dataSet) {
-            var data = dataSet[0].data;
-            var sum = data.reduce(add, 0);
-            $('#numProjects').html(sum);
-        }
-
-        function add(a, b) {
-            return a + b;
-        }
-
-        updateProjectTotal(RegionData['sp1']);
+        //updateProjectTotal(RegionData['sp1']);
         mapboxgl.accessToken = 'pk.eyJ1IjoidW5kcC1jY2EiLCJhIjoiY2lqdzNnZTRjMGhrYnRxbTVqdXN1bG1jciJ9.XYxJ9kfNn5Dd_CNVytKTjw';
         var map = new mapboxgl.Map({
             container: 'map',
@@ -21,7 +11,6 @@
             pitch: 10,
             center: [30, 0],
         });
-        console.log(mapboxgl);
         map.scrollZoom.disable();
         map.addControl(new mapboxgl.NavigationControl({position:'bottom-right'}));
 
@@ -62,11 +51,13 @@
                 map.setLayoutProperty(selectedLayer, 'visibility', 'visible');
                 $('#container-'+selectedLayer).addClass('active');
 
+                SPChart.data.datasets = RegionData[selectedLayer].data.geographical;
 
-                SPChart.data.datasets = RegionData[selectedLayer];
-                updateProjectTotal(RegionData[selectedLayer]);
                 SPChart.update();
                 SPChart.render(1000, true);
+
+                $('#spDynamicContent .container.text .title').html(RegionData[selectedLayer].title);
+                $('#spDynamicContent .container.text .description').html(RegionData[selectedLayer].description);
             });
         });
     });
