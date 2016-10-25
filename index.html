@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <script src="assets/javascripts/libs/Modernizr/modernizr.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Oswald:300,400,700" rel="stylesheet">
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.24.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/stylesheets/screen.css" media="screen" />
 </head>
 <body class="landing-page impact front">
     <div id="pageTop"></div>
     <div class="page-wrapper">
-        <a href="#section-4" class="corner-ribbon scroll-on-page-link" id="subscriptionRibbon">subscribe</a>
+        <a href="#footer" class="corner-ribbon scroll-on-page-link" id="subscriptionRibbon">subscribe</a>
         <div class="hero">
-            <div class="menu-wrapper">
+            <div class="menu-wrapper" id="mainMenuBar">
                 <div class="menu-toggle" id="menuToggle"><span class="fa fa-bars"></span></div>
-                <div class="main-menu-bar" id="mainMenuBar" role="navigation">
+                <div class="main-menu-bar" role="navigation">
                     <ul class="items">
                         <li><a class="scroll-on-page-link" href="#pageTop">Home</a></li>
                         <li><a class="scroll-on-page-link" href="#section-1">UNDP CCA </a></li>
@@ -45,8 +45,20 @@
                 <p>In 2016, our work has progressed from ideas to projects, from action to results. This is reflected in our signature programmes.</p>
                 <div class="card">
                     <h4>Explore UNDP CCA Signature Programmes</h4>
-                    <div class="app-container" id="app">
-                        <nav id="menu"></nav>
+                    <div class="app-container map-app" id="app">
+                        <div class="select-container">
+                            <div class="select-wrapper">
+                                <select id="spSelect">
+                                    <option value="sp1">Signature Programme 1</option>
+                                    <option value="sp2">Signature Programme 2</option>
+                                    <option value="sp3">Signature Programme 3</option>
+                                    <option value="sp4">Signature Programme 4</option>
+                                    <option value="sp5">Signature Programme 5</option>
+                                    <option value="sp6">Signature Programme 6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<nav id="menu"></nav>-->
                         <div class="map-container">
                             <div id="map"></div>
                             <div class="signature-programme container active" id="container-sp1">
@@ -68,14 +80,23 @@
                                 <h4>6. Community Resilience Through Integrated Landscape Management</h4>
                             </div>
                         </div>
-                        <div class="container graph">
-                            <h5><span id="numProjects">80</span> Projects</h5>
-                            <canvas id="regionsChart" class="graph bar"></canvas>
+                        <div class="dynamic-content-container" id="spDynamicContent">
+                            <div class="container text">
+                                <h6 class="title">Supporting Integrated Climate Change Strategies</h6>
+                                <p class="description">UNDP supports countries to formulate Integrated Climate Change Strategies that will assist national and sub-national governments to develop and strengthen policies, institutions, capacities and knowledge for integrated green, low-emission and climate resilient development. It also involves utilising a full range of supportive financing mechanisms to support that development.</p>
+                            </div>
+                            <div class="container graphs">
+                                <div class="card">
+                                    <h4>Geographical Balance</h4>
+                                    <canvas id="regionsChart" class="graph bar"></canvas>
+                                    <!--<p>UNDP's programmes are distributed globally to address climate change adaptation challenges where assistance most needed.</p>-->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="impact-stories" class="section padding">
+            <div id="section-2" class="section padding">
                 <h1>Impact Stories</h1>
                 <div class="content carousel-navigator" data-swiper-parallax="-800">
                     <div class="swiper-container impact-stories horizontal">
@@ -159,15 +180,30 @@
                         </div>
                     </div>
                 </div>
-            <div id="section-4" class="section fixed-width">
-                <h1>Subscribe</h1>
-                <form class="subscribe grid" id="subscribeForm" action="#section-4">
-                    <input type="text" class="grid-8-cols small"><input type="submit" value="subscribe" class="grid-4-cols small submit"></form>
-                </form>
-            </div>
         </article>
-        <footer>
-            <h1>Footer</h1>
+        <footer id="footer" class="block inverted">
+            <p>Subscribe to our newsletter to keep up to date with the latest news about UNDP Climate Change Adaptation.</p>
+            <form class="subscribe grid" id="subscribeForm" action="#section-4">
+                <input type="text" class="grid-8-cols small"><input type="submit" value="subscribe" class="grid-4-cols small submit"></form>
+            </form>
+            <div class="section">
+                <div class="grid">
+                    <div class="grid-4-cols small">
+                        <h6>Useful Links</h6>
+                        <ul class="links list">
+                            <li><a href="#">UNDP Global Site</a></li>
+                            <li><a href="#">The UNDP Adaptation Portal</a></li>
+                            <li><a href="#">Global Support Programme</a></li>
+                        </ul>
+                    </div>
+                    <div class="grid-4-cols small">
+                        <h6>Not so useful links</h6>
+                    </div>
+                    <div class="grid-4-cols small">
+                        <h6>Really boring stuff</h6>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
     <a class="scroll-on-page-link" href="#pageTop" id="goToTop"><span class="fa fa-chevron-up" aria-hidden="true"></span></a>
@@ -176,7 +212,7 @@
 <script src="./assets/javascripts/libs/jQuery/jquery.min.js"></script>
 <script src="./assets/javascripts/libs/ScrollMagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
-<script src='https://api.mapbox.com/mapbox-gl-js/v0.23.0/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
 <script src="assets/javascripts/libs/Chartjs/dist/Chart.bundle.js"></script>
 <script src="assets/javascripts/libs/spin/spin.min.js"></script>
 

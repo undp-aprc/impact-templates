@@ -9,7 +9,7 @@
             offset: 1
         })
             .setPin('#mainMenuBar')
-            .setClassToggle('#mainMenuBar','scrolled')
+            .setClassToggle('.menu-wrapper','scrolled')
             .addTo(controller);
 
 

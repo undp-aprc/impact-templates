@@ -9,16 +9,16 @@
             }
 
             options = jQuery.extend(defaults, options);
-            return jQuery(options.selector).click(function (e) {
+            return jQuery(options.selector).bind('touchstart click', function (e) {
                 var jumpobj = jQuery(this);
                 var target = jumpobj.attr('href');
                 var thespeed = 1000;
                 var offset = jQuery(target).offset().top;
-                console.log(offset);
                 jQuery('html,body').animate({
                     scrollTop: offset - 70
                 }, thespeed, 'swing');
                 e.preventDefault();
+                return false;
             });
         }
     };

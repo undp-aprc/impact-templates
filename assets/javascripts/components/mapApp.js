@@ -19,8 +19,11 @@
             minZoom: 1,
             maxZoom: 3,
             pitch: 10,
-            center: [30, 0]
+            center: [30, 0],
         });
+        console.log(mapboxgl);
+        map.scrollZoom.disable();
+        map.addControl(new mapboxgl.NavigationControl({position:'bottom-right'}));
 
         map.on('load', function() {
             mapSpinner.stop();
@@ -39,7 +42,7 @@
                 link.id = 'btn-'+id;
 
                 var layers = document.getElementById('menu');
-                layers.appendChild(link);
+                /*layers.appendChild(link);*/
                 map.setLayoutProperty(id, 'visibility', 'none'); // Set all layers to invisible
             }
 
@@ -47,32 +50,23 @@
             map.setLayoutProperty('sp1', 'visibility', 'visible');
             $('#btn-sp1').toggleClass('active');
 
-            $('.toggle-btn').on('click', function(e) {
-                var clickedLayer = this.dataset.id;
-                e.preventDefault();
-                e.stopPropagation();
+            $('#spSelect').on('change', function(e) {
+                var selectedLayer = e.target.value;
+                var visibility = map.getLayoutProperty(selectedLayer, 'visibility');
 
-                var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-
-                if (visibility === 'none') { // This block toggles active state of layers
-                    // Find any other items that are active and deactivate them before making the clicked layer active
-                    var activeLayers = $(this).parent('#menu').children('.active');
-                    activeLayers.each(function(i){
-                        var layerId = activeLayers[i].dataset.id;
-                        map.setLayoutProperty(layerId, 'visibility', 'none');
-                        $('#btn-'+layerId).removeClass('active');
-                        $('#container-'+layerId).removeClass('active');
-                    });
-                    // All deactive now, so make the clicked layer active
-                    map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-                    $(this).addClass('active');
-                    $('#container-'+clickedLayer).addClass('active');
-                    // Update the chart
-                    SPChart.data.datasets = RegionData[clickedLayer];
-                    updateProjectTotal(RegionData[clickedLayer]);
-                    SPChart.update();
-                    SPChart.render(1000, false);
+                for (var i = 0; i < toggleableLayerIds.length; i++) {
+                    map.setLayoutProperty(toggleableLayerIds[i], 'visibility', 'none');
+                    $('#container-'+toggleableLayerIds[i]).removeClass('active');
                 }
+
+                map.setLayoutProperty(selectedLayer, 'visibility', 'visible');
+                $('#container-'+selectedLayer).addClass('active');
+
+
+                SPChart.data.datasets = RegionData[selectedLayer];
+                updateProjectTotal(RegionData[selectedLayer]);
+                SPChart.update();
+                SPChart.render(1000, true);
             });
         });
     });

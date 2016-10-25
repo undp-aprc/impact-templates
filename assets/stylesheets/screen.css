@@ -6929,8 +6929,12 @@ a:visited {
   background-color: #272727;
 }
 /* line 56, ../../../src/sass/styles/_colors.scss */
-.block.inverted p {
+.block.inverted h1, .block.inverted h2, .block.inverted h3, .block.inverted h4, .block.inverted h5, .block.inverted h6 {
   color: white;
+}
+/* line 59, ../../../src/sass/styles/_colors.scss */
+.block.inverted p {
+  color: #e6e7e8;
 }
 
 /* Font Families */
@@ -7197,137 +7201,158 @@ h1, h2 {
   margin-right: 0;
 }
 
-/* line 1, ../../../src/sass/scaffold/_forms.scss */
+/* line 3, ../../../src/sass/scaffold/_forms.scss */
 input[type=text], input[type=submit] {
   font-size: 1.25em;
   padding: 1rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #e6e7e8;
   line-height: 1.25em;
 }
 
-/* line 10, ../../../src/sass/scaffold/_forms.scss */
+/* line 9, ../../../src/sass/scaffold/_forms.scss */
 input.submit {
   background-color: #40b6df;
 }
-/* line 12, ../../../src/sass/scaffold/_forms.scss */
+/* line 11, ../../../src/sass/scaffold/_forms.scss */
 input.submit:hover {
   background-color: #009ed4;
 }
 
-/* line 12, ../../../src/sass/scaffold/_scaffold.scss */
-footer {
-  height: 50vh;
-  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png"), linear-gradient(0, #333, #555), center no-repeat #333 scroll;
+/* line 17, ../../../src/sass/scaffold/_forms.scss */
+.select-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #f0f1f2;
+  border: 1px solid #e6e7e8;
+  margin-bottom: 1em;
   position: relative;
 }
+/* line 25, ../../../src/sass/scaffold/_forms.scss */
+.select-wrapper select {
+  background: transparent;
+  border: none;
+  height: 100%;
+  padding: 1em;
+  /* If you add too much padding here, the options won't show in IE */
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #676768;
+}
+/* line 35, ../../../src/sass/scaffold/_forms.scss */
+.select-wrapper:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  font-size: 2em;
+  position: absolute;
+  right: 0.5em;
+  top: 0;
+  color: #676768;
+}
 
-/* line 19, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 46, ../../../src/sass/scaffold/_forms.scss */
+.form-label {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+  text-align: left !important;
+  text-indent: 1rem;
+}
+
+/* line 8, ../../../src/sass/scaffold/_scaffold.scss */
+footer {
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/subtle_grunge.png"), linear-gradient(0, #333, #555), center no-repeat #333 scroll;
+  position: relative;
+  padding: 1em;
+}
+
+/* line 15, ../../../src/sass/scaffold/_scaffold.scss */
+.section {
+  padding-top: 1em;
+}
+/* line 17, ../../../src/sass/scaffold/_scaffold.scss */
 .section h1, .section p {
   text-align: center;
 }
 
-/* line 25, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 23, ../../../src/sass/scaffold/_scaffold.scss */
 .padding {
   padding: 1em;
 }
 
-/* line 29, ../../../src/sass/scaffold/_scaffold.scss */
-#section-2 {
-  background-color: rgba(103, 103, 104, 0.2);
+/* line 3, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
 }
-
-/* line 4, ../../../src/sass/components/_main_menu.scss */
+/* line 7, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper .menu-toggle {
   position: fixed;
-  z-index: 2000;
   color: white;
   line-height: 1.92em;
   font-size: 1.5625em;
-  padding-left: 1em;
+  padding-left: 1rem;
+  z-index: 2000;
 }
-/* line 11, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .menu-toggle.active {
-  color: #272727;
-}
-/* line 15, ../../../src/sass/components/_main_menu.scss */
+/* line 16, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper .main-menu-bar {
   background-color: white;
-  width: 100% !important;
-  z-index: 1000;
-  transition: all 0.2s linear;
-  transform: translate3d(0, 0, 0);
-  opacity: 0;
-  padding-bottom: 0.5em;
-}
-/* line 23, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar h1, .menu-wrapper .main-menu-bar h2, .menu-wrapper .main-menu-bar h3, .menu-wrapper .main-menu-bar h4, .menu-wrapper .main-menu-bar h5, .menu-wrapper .main-menu-bar h6 {
-  color: white;
-  letter-spacing: 0.4em;
-  text-align: center;
-  text-transform: uppercase;
-}
-/* line 29, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar p {
-  color: #e6e7e8;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  margin-bottom: 0em;
-}
-/* line 36, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar .items {
-  height: 0em;
-  overflow: hidden;
+  height: 3em;
   width: 100%;
-  background-color: rgba(0, 158, 212, 0.95);
-  justify-content: center;
-  padding: 1em 0;
-  font-size: inherit;
-  padding: 0 1em;
-  transition: height 0.5s ease-out;
+  padding-bottom: 0.5em;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s linear;
+  opacity: 0;
+  z-index: 1000;
+  position: relative;
 }
-/* line 46, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar .items li {
+/* line 27, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper .items {
+  width: 100%;
+  height: 0;
+  background-color: rgba(0, 158, 212, 0.9);
+  transition: all 0.2s ease-out;
+  margin-top: 3em;
+  position: absolute;
+  z-index: 500;
+  overflow: hidden;
+  padding-left: 1em;
+}
+/* line 37, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper .items li {
   margin-top: 1em;
 }
-/* line 49, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar .items a {
+/* line 40, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper .items li a {
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
   color: white;
 }
-/* line 53, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar .items p {
-  margin-bottom: 0;
+/* line 47, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper.active .menu-toggle, .menu-wrapper.scrolled .menu-toggle {
+  color: #272727;
 }
-@media screen and (min-width: 48em) {
-  /* line 36, ../../../src/sass/components/_main_menu.scss */
-  .menu-wrapper .main-menu-bar .items {
-    height: auto;
-    display: flex;
-    background-color: white;
-    margin-top: 0;
-    padding: 0.5em 0;
-  }
-  /* line 63, ../../../src/sass/components/_main_menu.scss */
-  .menu-wrapper .main-menu-bar .items li {
-    margin-top: 0;
-    margin-left: 2em;
-    margin-right: 2em;
-  }
-  /* line 68, ../../../src/sass/components/_main_menu.scss */
-  .menu-wrapper .main-menu-bar .items a {
-    color: black;
-  }
-}
-/* line 74, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar.scrolled, .menu-wrapper .main-menu-bar.active {
+/* line 50, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper.active .main-menu-bar, .menu-wrapper.scrolled .main-menu-bar {
   opacity: 1;
-  font-size: 100%;
 }
-/* line 79, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .menu-panel {
+/* line 56, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper.active .items {
+  height: 100vh;
+}
+
+/* line 63, ../../../src/sass/components/_main_menu.scss */
+.topic-page .main-menu-bar {
+  opacity: 1;
+  background-color: rgba(232, 78, 15, 0.5);
+  text-align: center;
+  height: 5em;
+}
+/* line 68, ../../../src/sass/components/_main_menu.scss */
+.topic-page .main-menu-bar.scrolled {
+  background-color: #e84e0f;
+}
+/* line 73, ../../../src/sass/components/_main_menu.scss */
+.topic-page .menu-panel {
   background-color: rgba(255, 255, 255, 0.95);
   height: 0;
   width: 100%;
@@ -7336,21 +7361,92 @@ footer {
   transition: all 0.5s linear;
   overflow: hidden;
 }
-/* line 87, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .menu-panel.active {
+/* line 81, ../../../src/sass/components/_main_menu.scss */
+.topic-page .menu-panel.active {
   height: 100vh;
 }
 
-/* line 95, ../../../src/sass/components/_main_menu.scss */
-.topic-page .main-menu-bar {
-  opacity: 1;
-  background-color: rgba(232, 78, 15, 0.5);
-}
-/* line 98, ../../../src/sass/components/_main_menu.scss */
-.topic-page .main-menu-bar.scrolled {
-  background-color: #e84e0f;
+/*.menu-wrapper {
+  .menu-toggle {
+    position: fixed;
+    z-index: 2000;
+    color: white;
+    line-height: $base-line-height * 2 / ((strip-unit(modular-scale(2)*$base-font-size))) + em;
+    font-size: modular-scale(2);
+    padding-left: 1em;
+    &.active, &.scrolled {
+      color:get-color('grey',5);
+    }
+  }
+  .main-menu-bar {
+    background-color: rgba(255,255,255,1);
+    width:100% !important;
+    z-index: 1000;
+
+
+    opacity:0;
+    padding-bottom: 0.5em;
+    height:3em;
+    position: relative;
+    h1, h2, h3, h4, h5, h6 {
+      color: white;
+      letter-spacing: 0.4em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      color: get-color('grey',1,1);
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      margin-bottom: 0em;
+    }
+    .items {
+      height:0em;
+      overflow: hidden;
+      width:100%;
+      background-color: get-color('azure',3,0.95);
+      justify-content: center;
+      padding:1em 0;
+      font-size: inherit;
+      padding:0 1em;
+      transition:height $transition-medium ease-out;
+      li {
+        margin-top: 1em;
+      }
+      a {
+        font-family: $font-headings;
+        color: white;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      // Override styles for non-mobile menu display
+      @include media($menu-bp) {
+        height:auto;
+        display: flex;
+        background-color: rgba(255,255,255,1);
+        margin-top: 0;
+        padding:0.5em 0;
+        li {
+          margin-top: 0;
+          margin-left:2em;
+          margin-right:2em;
+        }
+        a {
+          color: black;
+        }
+      }
+    }
+
+    &.scrolled, &.active {
+      opacity: 1;
+      font-size: 100%;
+    }
+  }
 }
 
+*/
 /* line 1, ../../../src/sass/components/_hero.scss */
 .hero {
   position: relative;
@@ -7695,6 +7791,35 @@ a.corner-ribbon.scrolled:hover {
 /* line 123, ../../../src/sass/components/_mapApp.scss */
 #menu a.active:hover {
   background: #3074a4;
+}
+
+/* line 128, ../../../src/sass/components/_mapApp.scss */
+.app-container.map-app .dynamic-content-container {
+  display: block;
+}
+/* line 131, ../../../src/sass/components/_mapApp.scss */
+.app-container.map-app .dynamic-content-container .container {
+  padding: 1em;
+  flex-direction: row;
+}
+/* line 134, ../../../src/sass/components/_mapApp.scss */
+.app-container.map-app .dynamic-content-container .container.graphs {
+  flex: 2;
+}
+/* line 137, ../../../src/sass/components/_mapApp.scss */
+.app-container.map-app .dynamic-content-container .container.text {
+  flex: 2;
+}
+/* line 139, ../../../src/sass/components/_mapApp.scss */
+.app-container.map-app .dynamic-content-container .container.text h5, .app-container.map-app .dynamic-content-container .container.text h6, .app-container.map-app .dynamic-content-container .container.text p {
+  margin-bottom: 1em;
+  text-align: left;
+}
+@media screen and (min-width: 40em) {
+  /* line 128, ../../../src/sass/components/_mapApp.scss */
+  .app-container.map-app .dynamic-content-container {
+    display: flex;
+  }
 }
 
 /* line 1, ../../../src/sass/components/_card.scss */
@@ -8485,32 +8610,32 @@ footer .partner-logos p {
   }
 }
 /* line 2, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .swiper-slide {
+#section-2 .swiper-slide {
   height: 20em;
 }
 @media screen and (min-width: 40em) {
   /* line 2, ../../../src/sass/components/_impact_stories.scss */
-  #impact-stories .swiper-slide {
+  #section-2 .swiper-slide {
     height: 10em;
   }
 }
 /* line 8, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper {
+#section-2 .dynamic-content-container .flex-wrapper {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 40em) {
   /* line 8, ../../../src/sass/components/_impact_stories.scss */
-  #impact-stories .dynamic-content-container .flex-wrapper {
+  #section-2 .dynamic-content-container .flex-wrapper {
     flex-direction: row;
   }
 }
 /* line 14, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper p {
+#section-2 .dynamic-content-container .flex-wrapper p {
   text-align: left;
 }
 /* line 17, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper .side {
+#section-2 .dynamic-content-container .flex-wrapper .side {
   padding: 0.5em;
   background-color: rgba(230, 231, 232, 0.5);
   order: 2;
@@ -8518,30 +8643,30 @@ footer .partner-logos p {
   flex-direction: column;
 }
 /* line 23, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper .side .sdg-tiles.flex-wrapper {
+#section-2 .dynamic-content-container .flex-wrapper .side .sdg-tiles.flex-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: 1em;
 }
 /* line 28, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper .side .sdg-tiles.flex-wrapper li {
+#section-2 .dynamic-content-container .flex-wrapper .side .sdg-tiles.flex-wrapper li {
   flex: 50%;
   flex-grow: 0;
 }
 /* line 33, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper .side h6 {
+#section-2 .dynamic-content-container .flex-wrapper .side h6 {
   font-size: 0.5em;
   color: #676768;
   font-style: normal;
   margin-bottom: 1em;
 }
 /* line 40, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper .main {
+#section-2 .dynamic-content-container .flex-wrapper .main {
   order: 1;
 }
 /* line 43, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper p.learn-more {
+#section-2 .dynamic-content-container .flex-wrapper p.learn-more {
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
   background-color: rgba(166, 167, 168, 0.5);
   padding: 0.5em;
@@ -8552,13 +8677,13 @@ footer .partner-logos p {
   margin-bottom: 0;
 }
 /* line 52, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper p.learn-more a {
+#section-2 .dynamic-content-container .flex-wrapper p.learn-more a {
   display: inline-block;
   color: #676768;
   text-align: center;
 }
 /* line 56, ../../../src/sass/components/_impact_stories.scss */
-#impact-stories .dynamic-content-container .flex-wrapper p.learn-more a .fa {
+#section-2 .dynamic-content-container .flex-wrapper p.learn-more a .fa {
   color: #a6a7a8;
 }
 
