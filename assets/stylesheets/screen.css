@@ -8085,17 +8085,7 @@ a.corner-ribbon.scrolled:hover {
   flex-flow: row wrap;
 }
 
-/* line 2, ../../../src/sass/components/_topic_page.scss */
-.topic-page .menu-title {
-  background-color: rgba(232, 78, 15, 0.5);
-  transition: all 0.2s linear;
-}
-/* line 6, ../../../src/sass/components/_topic_page.scss */
-.topic-page .menu-title.scrolled {
-  background: #e84e0f;
-}
-
-/* line 12, ../../../src/sass/components/_topic_page.scss */
+/* line 1, ../../../src/sass/components/_topic_page.scss */
 .topic-header {
   display: flex;
   flex-direction: column;
@@ -8104,30 +8094,30 @@ a.corner-ribbon.scrolled:hover {
   background-image: url("/assets/images/ui/seigaiha.png");
   background-attachment: fixed;
 }
-/* line 16, ../../../src/sass/components/_topic_page.scss */
+/* line 5, ../../../src/sass/components/_topic_page.scss */
 .topic-header h1, .topic-header h2, .topic-header h3, .topic-header h4, .topic-header h5, .topic-header h6, .topic-header p {
   color: white;
   text-align: center;
 }
-/* line 20, ../../../src/sass/components/_topic_page.scss */
+/* line 9, ../../../src/sass/components/_topic_page.scss */
 .topic-header p {
   margin-top: 1em;
   font-size: 1.25em;
   padding: 0 1em;
 }
 
-/* line 30, ../../../src/sass/components/_topic_page.scss */
+/* line 19, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation {
   position: relative;
 }
-/* line 33, ../../../src/sass/components/_topic_page.scss */
+/* line 22, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
 }
-/* line 39, ../../../src/sass/components/_topic_page.scss */
+/* line 28, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li {
   flex-grow: 1;
   flex-basis: 0;
@@ -8141,23 +8131,23 @@ a.corner-ribbon.scrolled:hover {
   background-color: #80cfea;
   padding: 1em 0;
 }
-/* line 51, ../../../src/sass/components/_topic_page.scss */
+/* line 40, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-/* line 56, ../../../src/sass/components/_topic_page.scss */
+/* line 45, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li p {
   text-align: center;
   font-size: 0.5em;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
 }
-/* line 61, ../../../src/sass/components/_topic_page.scss */
+/* line 50, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li img {
   height: 3em;
 }
-/* line 64, ../../../src/sass/components/_topic_page.scss */
+/* line 53, ../../../src/sass/components/_topic_page.scss */
 .topic-navigation li.active a::after {
   display: block;
   background-image: url("/assets/images/ui/arrow-up.svg");
@@ -8171,43 +8161,43 @@ a.corner-ribbon.scrolled:hover {
   height: 100px;
 }
 
-/* line 85, ../../../src/sass/components/_topic_page.scss */
+/* line 74, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li {
   display: flex;
   flex-direction: row;
   margin-bottom: 2em;
 }
-/* line 89, ../../../src/sass/components/_topic_page.scss */
+/* line 78, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li p, .lessons-learnt li img {
   align-self: center;
   margin: 0;
 }
-/* line 93, ../../../src/sass/components/_topic_page.scss */
+/* line 82, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li p {
   padding-right: 1em;
   flex: 4;
   color: #272727;
 }
-/* line 98, ../../../src/sass/components/_topic_page.scss */
+/* line 87, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt li img {
   flex: 1;
 }
-/* line 102, ../../../src/sass/components/_topic_page.scss */
+/* line 91, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt .align-right {
   flex-direction: row-reverse;
 }
-/* line 104, ../../../src/sass/components/_topic_page.scss */
+/* line 93, ../../../src/sass/components/_topic_page.scss */
 .lessons-learnt .align-right p {
   padding-right: 0;
   padding-left: 1em;
 }
 
-/* line 111, ../../../src/sass/components/_topic_page.scss */
+/* line 100, ../../../src/sass/components/_topic_page.scss */
 .highlight-text {
   text-align: center;
 }
 
-/* line 116, ../../../src/sass/components/_topic_page.scss */
+/* line 105, ../../../src/sass/components/_topic_page.scss */
 .swiper-container .swiper-button {
   position: absolute;
   top: 20%;
@@ -8215,16 +8205,16 @@ a.corner-ribbon.scrolled:hover {
   color: white;
   z-index: 1000;
 }
-/* line 123, ../../../src/sass/components/_topic_page.scss */
+/* line 112, ../../../src/sass/components/_topic_page.scss */
 .swiper-container .button-next {
   right: 1rem;
 }
-/* line 126, ../../../src/sass/components/_topic_page.scss */
+/* line 115, ../../../src/sass/components/_topic_page.scss */
 .swiper-container .button-prev {
   left: 1rem;
 }
 
-/* line 132, ../../../src/sass/components/_topic_page.scss */
+/* line 121, ../../../src/sass/components/_topic_page.scss */
 .swiper-container.horizontal .swiper-slide {
   width: 25%;
   height: 10em;
@@ -8239,11 +8229,11 @@ a.corner-ribbon.scrolled:hover {
   filter: grayscale(100%);
   transition: filter 0.5s linear;
 }
-/* line 145, ../../../src/sass/components/_topic_page.scss */
+/* line 134, ../../../src/sass/components/_topic_page.scss */
 .swiper-container.horizontal .swiper-slide.swiper-slide-active {
   filter: grayscale(0%);
 }
-/* line 148, ../../../src/sass/components/_topic_page.scss */
+/* line 137, ../../../src/sass/components/_topic_page.scss */
 .swiper-container.horizontal .swiper-slide .label {
   text-align: center;
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
@@ -8251,17 +8241,17 @@ a.corner-ribbon.scrolled:hover {
   padding: 0.5em;
 }
 
-/* line 158, ../../../src/sass/components/_topic_page.scss */
+/* line 147, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .flex-wrapper {
   display: block;
 }
 @media screen and (min-width: 40em) {
-  /* line 158, ../../../src/sass/components/_topic_page.scss */
+  /* line 147, ../../../src/sass/components/_topic_page.scss */
   .dynamic-content-container .flex-wrapper {
     display: flex;
   }
 }
-/* line 164, ../../../src/sass/components/_topic_page.scss */
+/* line 153, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .side {
   display: none;
   flex: 3;
@@ -8269,21 +8259,21 @@ a.corner-ribbon.scrolled:hover {
   padding-top: 2.25em;
 }
 @media screen and (min-width: 40em) {
-  /* line 164, ../../../src/sass/components/_topic_page.scss */
+  /* line 153, ../../../src/sass/components/_topic_page.scss */
   .dynamic-content-container .side {
     display: block;
   }
 }
-/* line 172, ../../../src/sass/components/_topic_page.scss */
+/* line 161, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .side p {
   font-style: italic;
   color: #80aad4;
 }
-/* line 177, ../../../src/sass/components/_topic_page.scss */
+/* line 166, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .main {
   flex: 9;
 }
-/* line 179, ../../../src/sass/components/_topic_page.scss */
+/* line 168, ../../../src/sass/components/_topic_page.scss */
 .dynamic-content-container .main h1, .dynamic-content-container .main h2, .dynamic-content-container .main h3, .dynamic-content-container .main h4, .dynamic-content-container .main h5, .dynamic-content-container .main h6 {
   text-align: left;
 }
