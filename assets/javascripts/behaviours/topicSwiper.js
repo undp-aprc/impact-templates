@@ -2,6 +2,7 @@ var swiper = new Swiper('.swiper-container-main', {
     parallax: true,
     speed: 600,
     hashnav: true,
+    threshold: 100,
     paginationBulletRender: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
     }
