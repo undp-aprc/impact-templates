@@ -8,7 +8,145 @@ var swiper = new Swiper('.swiper-container-main', {
     }
 });
 
-var content = [
+var content = {
+    'themes': [
+        {
+            'title': 'Food and Nutritional Security',
+            'subtopics': [
+                {
+                    'title': "Strategies for increasing food production and provisioning",
+                    'stories': {
+                        'sudan': {
+                            'title': "Enhancing traditional women's gardens to improve food security in Sudan",
+                            'mainText': "In Sudan, two main types of approaches were developed across the four target states. In the River Nile State, targeted households received technical input and support to improve their individual home gardens. In North Kordofan and Gedarif, where water access is a cause for concern, the focus was on providing water access to collective land for vegetable cultivation. These collective plots, traditionally referred to as Jubraka, which means home garden, are managed by groups typically made up of ten to twelve women, and one man. The Jubraka have greatly contributed to diversifying food crops, particularly in the dry season. In addition, women received technical assistance to increase goat milk production, plant trees on the edge of cultivated land, and grow seedlings for different crops.",
+                            'highlightText': "The Jubraka or ‘home garden’, have greatly contributed to diversifying food crops, particularly in the dry season."
+                        },
+                        'cabo-verde': {
+                            'title': "A story about something in Cabo Verde",
+                            'mainText': "This is a story about something in Cabo Verde. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                            'highlightText': "Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula."
+                        },
+                        'haiti': {
+                            'title': "A story about something in Haiti",
+                            'mainText': "This is a story about something in Haiti. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                            'highlightText': "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus."
+                        },
+                    },
+                }]
+        },
+        {
+            'title': 'Water and access to water',
+            'subtopics': [
+                {
+                    'title': "the first subtopic about water stuff",
+                    'stories': {
+                        'cambodia': {
+                            'title': "Something about something in Cambodia",
+                            'mainText': "Some text about stuff in Cambodia. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                            'hightlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+                        },
+                        'niger': {
+                            'title': "This is a cool story about Niger",
+                            'mainText': "Something about Niger. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                            'highlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+};
+
+(function($) {
+    $(document).ready(function() {
+        var initData = $('.examples-box').data();
+        var initStory = content.themes[initData.inittheme].subtopics[initData.initsubtopic].stories[initData.initcountry];
+        var initItem = $('.examples-box').find('.item-wrapper').first();
+        initItem.addClass('active');
+        $('.examples-box .title').html(initStory.title);
+        $('.examples-box .main-text .text').html(initStory.mainText);
+        $('.examples-box .highlight-text').html(initStory.highlightText);
+        $('.examples-box .highlight-text').css('margin-top',$('.examples-box .title').outerHeight(true));
+
+
+        $('.examples-box .item-wrapper').bind('touchstart click', function(e) {
+            e.preventDefault();
+
+            // Get values
+            var data = $(this).children('.nav-item').data();
+            var story = content.themes[data.theme].subtopics[data.subtopic].stories[data.country];
+            var title = $('.examples-box').find('.main-text .title');
+            var text = $('.examples-box').find('.main-text .text');
+            var highlight = $('.examples-box').find('.second .highlight-text');
+
+            // Set the active class for clicked item (and remove from all others)
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+
+            title.html(story.title);
+            text.html(story.mainText);
+            highlight.html(story.highlightText);
+
+            highlight.css('margin-top', title.outerHeight(true));
+
+
+            return false; // Exit this function so second event not triggered
+        })
+    });
+})(jQuery);
+
+/*/!*        // Food and Nutritional Security (0)
+        {'subtopics': [
+            {
+                'title': "Strategies for increasing food production and provisioning",
+                'stories': {
+
+                    }
+                }
+            }],
+        ]
+};*!/
+       /!*'subtopics': {
+           'subtopic-1': {
+               'sudan': {
+                   'title': "Enhancing traditional women's gardens to improve food security in Suday",
+                   'mainText': "In Sudan, two main types of approaches were developed across the four target states. In the River Nile State, targeted households received technical input and support to improve their individual home gardens. In North Kordofan and Gedarif, where water access is a cause for concern, the focus was on providing water access to collective land for vegetable cultivation. These collective plots, traditionally referred to as Jubraka, which means home garden, are managed by groups typically made up of ten to twelve women, and one man. The Jubraka have greatly contributed to diversifying food crops, particularly in the dry season. In addition, women received technical assistance to increase goat milk production, plant trees on the edge of cultivated land, and grow seedlings for different crops.",
+                   'highlightText': "The Jubraka or ‘home garden’, have greatly contributed to diversifying food crops, particularly in the dry season."
+               },
+               'cabo-verde': {
+                   'title': "A story about something in Cabo Verde",
+                   'mainText': "This is a story about something in Cabo Verde. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                   'highlightText': "Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula."
+               },
+               'haiti': {
+                   'title': "A story about something in Haiti",
+                   'mainText': "This is a story about something in Haiti. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                   'highlightText': "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus."
+               }
+           },
+           'subtopic-2': {
+               'niger': {
+                   'title': "A story about something in Niger",
+                   'mainText': "This is a story about something in Cabo Verde. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                   'highlightText': "Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula."
+               },
+               'Cambodia': {
+                   'title': "A story about something in Cambodia",
+                   'mainText': "This is a story about something in Haiti. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                   'highlightText': "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus."
+               }
+           }
+       }
+    },
+    'theme-2': {
+
+    },
+    'theme-3': {
+
+    }*!/
+}
+
+/!*var content = [
     {
         'title': 'Enhacing traditional women’s gardens to improve food security in Sudan',
         'mainText': 'In Sudan, two main types of approaches were developed across the four target states. In the River Nile State, targeted households received technical input and support to improve their individual home gardens. In North Kordofan and Gedarif, where water access is a cause for concern, the focus was on providing water access to collective land for vegetable cultivation. These collective plots, traditionally referred to as Jubraka, which means home garden, are managed by groups typically made up of ten to twelve women, and one man. The Jubraka have greatly contributed to diversifying food crops, particularly in the dry season. In addition, women received technical assistance to increase goat milk production, plant trees on the edge of cultivated land, and grow seedlings for different crops.',
@@ -35,9 +173,9 @@ var content = [
         'mainText': '<p>Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh.</p><p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada.</p>',
         'highlightText': 'Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.'
     },
-]
+]*!/
 
-var subtopic01 = new Swiper('.swiper-container-sub-01', {
+/!*var subtopic01 = new Swiper('.swiper-container-sub-01', {
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
     centeredSlides: true,
@@ -66,7 +204,7 @@ subtopic01.on('slideChangeEnd', function(e) {
     $('#dynamicContentContainer').find('.title').html(content[realIndex].title);
     $('#dynamicContentContainer').find('.highlight-text').html(content[realIndex].highlightText);
     $('#dynamicContentContainer').find('.main-text').html(content[realIndex].mainText);
-});
+}); */
 
 $('.topic-navigation a').on('click', function(e) {
     var me = $(this);
