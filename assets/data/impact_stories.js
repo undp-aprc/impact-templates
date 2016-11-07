@@ -22,7 +22,7 @@ var ImpactStories = [
     },
     {
         'title': 'Addressing the Risks of Climate Induced Disasters in Bhutan through Enhanced National and Local Capacity for Effective Actions',
-        'text': 'Water Supply upgraded in Mongar Municipality so that 3000 households now have access to a continuous supply of treated water throughout the year. Water management committees were formed with saving schemes initiated to support operation and management of water supply systems. In addition, processes were developed and implemented to establish community forest-fire management groups to increase community resilience to climate risks.',
+        'text': 'Water Supply upgraded in Mongar Municipality so that 3000 households now have access to a  continuous supply of treated water throughout the year. Water management committees were formed with saving schemes initiated to support operation and management of water supply systems. In addition, processes were developed and implemented to establish community forest-fire management groups to increase community resilience to climate risks.',
         'sdgs': [1,5,6,13],
         'image': 'bhutan.jpg',
         'url': 'http://www.adaptation-undp.org/projects/ldcf-enhanced--capacity-bhutan'
