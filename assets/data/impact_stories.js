@@ -14,7 +14,7 @@ var ImpactStories = [
         'url': 'http://www.adaptation-undp.org/projects/af-papua-new-guinea'
     },
     {
-        'title': 'Adapting water resource management in the Comoros to expected climate change',
+        'title': 'Adapting Water Resource Management in the Comoros to Expected Climate Change',
         'text': 'The project saw a total of 35,740 linear meters of water distribution network being installed so that 78,647 people now have access to a safe water supply. Five new automatic weather stations were also installed on 3 islands to collect relevant climate information for water resources management.',
         'sdgs': [1,6,13],
         'image': 'comoros.jpg',
@@ -22,7 +22,7 @@ var ImpactStories = [
     },
     {
         'title': 'Addressing the Risks of Climate Induced Disasters in Bhutan through Enhanced National and Local Capacity for Effective Actions',
-        'text': 'Water Supply upgraded in Mongar Municipality so that 3000 households now have access to a  continuous supply of treated water throughout the year. Water management committees were formed with saving schemes initiated to support operation and management of water supply systems. In addition, processes were developed and implemented to establish community forest-fire management groups to increase community resilience to climate risks.',
+        'text': 'Water supply upgraded in Mongar Municipality so that 3000 households now have access to a  continuous supply of treated water throughout the year. Water management committees were formed with saving schemes initiated to support operation and management of water supply systems. In addition, processes were developed and implemented to establish community forest-fire management groups to increase community resilience to climate risks.',
         'sdgs': [1,5,6,13],
         'image': 'bhutan.jpg',
         'url': 'http://www.adaptation-undp.org/projects/ldcf-enhanced--capacity-bhutan'
@@ -36,7 +36,7 @@ var ImpactStories = [
     },
     {
         'title': 'Technology Transfer for Climate Resilient Flood Management in Bosnia and Herzegovina\'s Vrbas River Basin​',
-        'text': 'A new hydro-meteorological network was built, which is comprised 20 rainfall monitors, 2 meteorological stations & 6 automatic hydrological measuring stations.',
+        'text': 'A new hydro-meteorological network was built, which is comprised 20 rainfall monitors, 2 meteorological stations and 6 automatic hydrological measuring stations.',
         'sdgs': [1,13],
         'image': 'bosnia.jpg',
         'url': 'http://www.adaptation-undp.org/projects/sccf-bosnia'
@@ -57,7 +57,7 @@ var ImpactStories = [
     },
     {
         'title': 'Developing Agro-Pastoral Shade Gardens in Djibouti​',
-        'text': 'The project saw the construction of 16 check dams and 1 micro-dam with the potential to harvest 100,000 cubic metre rainwater per year. 10 hectares of new agricultural plots were developed to settle pastoral communities. 2 watershed, 8 rain gauges and 2 meteorological stations were set up to monitor flood and drought. The National Adaptation Plan was also initiated with training for government staff and civil society members.',
+        'text': 'The project saw the construction of 16 check dams and 1 micro-dam with the potential to harvest 100,000 cubic metres of rainwater per year. 10 hectares of new agricultural plots were developed to settle pastoral communities. 2 watershed, 8 rain gauges and 2 meteorological stations were set up to monitor flood and drought. The National Adaptation Plan was also initiated with training for government staff and civil society members.',
         'sdgs': [1,13],
         'image': 'djibouti.jpg',
         'url': 'http://www.adaptation-undp.org/projects/af-djibouti'
@@ -70,7 +70,7 @@ var ImpactStories = [
         'url': 'http://adaptation-undp.org/projects/ldcf-agriculture-mali'
     },
     {
-        'title': 'Strengthening the resilience of post-conflict recovery and development to climate change risks in Sri Lanka',
+        'title': 'Strengthening the Resilience of Post-Conflict Recovery and Development to Climate Change Risks in Sri Lanka',
         'text': 'The project supported adaptation actions including cultivation of perennial fruit crops through farmer organizations. 20,000 fruit seedlings were planted. Trainings were completed on agricultural technologies and market linkages were facilitated with buy-back guarantee. Many minor irrigation tanks were identified and about 30 rehabilitated to address impacts of climate change on water deficit and agriculture.',
         'sdgs': [1,2,6,13],
         'image': 'srilanka.jpg',

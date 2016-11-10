@@ -7459,18 +7459,19 @@ footer a:visited {
 }
 
 /* line 65, ../../../src/sass/components/_main_menu.scss */
-.topic-page .menu-wrapper .main-menu-bar {
+.menu-wrapper .main-menu-bar {
   opacity: 1;
   background-color: rgba(232, 78, 15, 0.5);
   text-align: center;
   height: 5em;
 }
 /* line 71, ../../../src/sass/components/_main_menu.scss */
-.topic-page .menu-wrapper.scrolled {
+.menu-wrapper.scrolled {
   background-color: #e84e0f;
 }
+
 /* line 76, ../../../src/sass/components/_main_menu.scss */
-.topic-page .menu-panel {
+.menu-panel {
   background-color: rgba(255, 255, 255, 0.95);
   height: 0;
   width: 100%;
@@ -7480,7 +7481,7 @@ footer a:visited {
   overflow: hidden;
 }
 /* line 84, ../../../src/sass/components/_main_menu.scss */
-.topic-page .menu-panel.active {
+.menu-panel.active {
   height: 100vh;
 }
 
@@ -8971,6 +8972,116 @@ footer .partner-logos p {
 .content-examples .second .highlight-text {
   color: #40b6df;
   padding-left: 1em;
+}
+
+/* line 1, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page {
+  min-height: 100vh;
+  background: url("/themes/gender/images/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+/* line 7, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items {
+  padding: 6em 1em 1em 1em;
+}
+/* line 9, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item {
+  padding: 4em 1em;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+/* line 18, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item a {
+  font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
+  color: #272727;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* line 25, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item.food {
+  background-image: url("/themes/gender/images/sprite-02.png");
+}
+/* line 28, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item.water {
+  background-image: url("/themes/gender/images/sprite-04.png");
+}
+/* line 31, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item.time-poverty {
+  background-image: url("/themes/gender/images/sprite-01.png");
+}
+/* line 34, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item.resource-access {
+  background-image: url("/themes/gender/images/sprite-03.png");
+}
+/* line 37, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item.leadership {
+  background-image: url("/themes/gender/images/sprite-06.png");
+}
+/* line 40, ../../../src/sass/components/_landing_page.scss */
+.topic-landing-page .nav-items .item.groups-at-risk {
+  background-image: url("/themes/gender/images/sprite-05.png");
+}
+@media screen and (min-width: 64em) {
+  /* line 7, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 48, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item {
+    background-color: transparent;
+    background-size: contain;
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    padding: 0;
+    margin: 0;
+  }
+  /* line 56, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item a {
+    position: absolute;
+    bottom: -10em;
+    width: 100%;
+  }
+  /* line 61, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item.food {
+    top: 15%;
+    left: 10%;
+  }
+  /* line 66, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item.water {
+    bottom: 20%;
+    left: 40%;
+  }
+  /* line 71, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item.time-poverty {
+    bottom: 10%;
+    left: 5%;
+  }
+  /* line 75, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item.groups-at-risk {
+    top: 15%;
+    right: 40%;
+  }
+  /* line 79, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item.resource-access {
+    top: 15%;
+    right: 10%;
+  }
+  /* line 83, ../../../src/sass/components/_landing_page.scss */
+  .topic-landing-page .nav-items .item.leadership {
+    bottom: 15%;
+    right: 10%;
+  }
 }
 
 /* line 1, ../../../src/sass/styles/charts/_charts.scss */

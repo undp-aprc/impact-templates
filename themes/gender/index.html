@@ -18,7 +18,7 @@
             <div class="menu-wrapper" id="mainMenuBar">
                 <div class="menu-toggle" id="menuToggle"><span class="fa fa-bars"></span></div>
                 <div class="main-menu-bar">
-
+                    <h3>Gender Impacts</h3>
                 </div>
                 <div class="menu-panel" id="menuPanel">
                     <ul>
@@ -32,11 +32,17 @@
                     </ul>
                 </div>
             </div>
-            <!--- Village Scene Here -->
+            <div class="topic-landing-page gender">
+                <ul class="nav-items">
+                    <li class="item sprite food" data-page="food-nutritional-security.html"><a href="/themes/gender/topics/food-nutritional-security.html">Food & Nutritional Security</a></li>
+                    <li class="item sprite water" data-page="water.html"><a href="/themes/gender/topics/water.html">Water & Governance of Water</a></li>
+                    <li class="item sprite time-poverty" data-page="time.html"><a href="/themes/gender/topics/time.html">Time Poverty</a></li>
+                    <li class="item sprite resource-access" data-page="resources.html"><a href="/themes/gender/topics/resources.html">Access to Resources</a></li>
+                    <li class="item sprite leadership" data-page="leadership.html"><a href="/themes/gender/topics/leadership.html">Leadership</a></li>
+                    <li class="item sprite groups-at-risk"data-page="groups-at-risk.html"><a href="/themes/gender/topics/groups-at-risk.html">Gender Groups at Risk</a></li>
+                </ul>
+            </div>
     </div>
-    <article>
-        <p>Lorem Ipsum</p>
-    </article>
     <footer>
         <div class="partner-logos">
             <p>In partnership with:</p>
@@ -61,9 +67,14 @@
 <script src="/assets/javascripts/behaviours/scrollingEffects.js"></script>
 <script src="/assets/javascripts/behaviours/scrollingEffects_topicPage.js"></script>
 <script src="/assets/javascripts/behaviours/scrollOnPage.js"></script>
-<script src="/assets/javascripts/behaviours/parallax.js"></script>
-<script src="/assets/javascripts/behaviours/topicSwiper.js"></script>
-
+<script>
+    $('.sprite').bind('touchstart click', function(e) {
+        if (e.target.nodeName != 'A') {
+            var page = e.target.dataset.page;
+            window.location.href = '/themes/gender/topics/'+page;
+            return false;
+        }
+    });
 </script>
 <script src="//localhost:35729/livereload.js"></script> <!-- Development only -->
 </body>
