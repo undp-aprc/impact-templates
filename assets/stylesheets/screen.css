@@ -7361,34 +7361,49 @@ footer a {
 footer a:visited {
   color: #f3a787 !important;
 }
+/* line 29, ../../../src/sass/scaffold/_scaffold.scss */
+footer .social-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+/* line 33, ../../../src/sass/scaffold/_scaffold.scss */
+footer .social-icons li {
+  flex: 1;
+}
+/* line 37, ../../../src/sass/scaffold/_scaffold.scss */
+footer .social-icons a span {
+  text-indent: -9999px;
+  display: block;
+}
 
-/* line 32, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 45, ../../../src/sass/scaffold/_scaffold.scss */
 .section {
   padding-top: 1em;
 }
-/* line 34, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 47, ../../../src/sass/scaffold/_scaffold.scss */
 .section h1, .section p {
   text-align: center;
 }
-/* line 37, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 50, ../../../src/sass/scaffold/_scaffold.scss */
 .section h1 {
   margin-bottom: 0;
 }
 
-/* line 43, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 56, ../../../src/sass/scaffold/_scaffold.scss */
 .padding {
   padding: 1em;
 }
 
-/* line 48, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 61, ../../../src/sass/scaffold/_scaffold.scss */
 #section-1 h1 {
   margin-bottom: 0.5em;
 }
-/* line 51, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 64, ../../../src/sass/scaffold/_scaffold.scss */
 #section-1 p {
   text-align: left;
 }
-/* line 54, ../../../src/sass/scaffold/_scaffold.scss */
+/* line 67, ../../../src/sass/scaffold/_scaffold.scss */
 #section-1 ul {
   list-style: square;
   list-style-position: inside;
@@ -7414,17 +7429,41 @@ footer a:visited {
 }
 /* line 16, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper .main-menu-bar {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   height: 3em;
   width: 100%;
   padding-bottom: 0.5em;
   transform: translate3d(0, 0, 0);
   transition: all 0.2s linear;
-  opacity: 0;
+  opacity: 1;
   z-index: 1000;
   position: relative;
+  text-align: center;
 }
-/* line 27, ../../../src/sass/components/_main_menu.scss */
+/* line 28, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper .menu-panel {
+  background-color: rgba(255, 255, 255, 0.95);
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 5000;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+/* line 36, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper .menu-panel.active {
+  height: 100vh;
+}
+/* line 39, ../../../src/sass/components/_main_menu.scss */
+.menu-wrapper .menu-panel a {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
+  margin-top: 1em;
+  color: #4b4b4b;
+}
+/* line 48, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper .items {
   width: 100%;
   height: 0;
@@ -7436,136 +7475,39 @@ footer a:visited {
   overflow: hidden;
   padding-left: 1em;
 }
-/* line 37, ../../../src/sass/components/_main_menu.scss */
+/* line 58, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper .items li {
   margin-top: 1em;
 }
-/* line 40, ../../../src/sass/components/_main_menu.scss */
+/* line 61, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper .items li a {
   font-family: "Oswald", Tahoma, Verdana, Arial, sans-serif;
   color: white;
 }
-/* line 47, ../../../src/sass/components/_main_menu.scss */
+/* line 68, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper.active .menu-toggle, .menu-wrapper.scrolled .menu-toggle {
   color: #272727;
 }
-/* line 50, ../../../src/sass/components/_main_menu.scss */
+/* line 71, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper.active .main-menu-bar, .menu-wrapper.scrolled .main-menu-bar {
   opacity: 1;
 }
-/* line 56, ../../../src/sass/components/_main_menu.scss */
+/* line 77, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper.active .menu-panel {
   height: 100vh;
 }
 
-/* line 65, ../../../src/sass/components/_main_menu.scss */
-.menu-wrapper .main-menu-bar {
+/* line 85, ../../../src/sass/components/_main_menu.scss */
+.topic-page .main-menu-bar {
   opacity: 1;
-  background-color: rgba(232, 78, 15, 0.5);
-  text-align: center;
   height: 5em;
 }
-/* line 71, ../../../src/sass/components/_main_menu.scss */
+
+/* line 98, ../../../src/sass/components/_main_menu.scss */
 .menu-wrapper.scrolled {
-  background-color: #e84e0f;
+  background-color: white;
 }
 
-/* line 76, ../../../src/sass/components/_main_menu.scss */
-.menu-panel {
-  background-color: rgba(255, 255, 255, 0.95);
-  height: 0;
-  width: 100%;
-  position: fixed;
-  z-index: 5000;
-  transition: all 0.5s linear;
-  overflow: hidden;
-}
-/* line 84, ../../../src/sass/components/_main_menu.scss */
-.menu-panel.active {
-  height: 100vh;
-}
-
-/*.menu-wrapper {
-  .menu-toggle {
-    position: fixed;
-    z-index: 2000;
-    color: white;
-    line-height: $base-line-height * 2 / ((strip-unit(modular-scale(2)*$base-font-size))) + em;
-    font-size: modular-scale(2);
-    padding-left: 1em;
-    &.active, &.scrolled {
-      color:get-color('grey',5);
-    }
-  }
-  .main-menu-bar {
-    background-color: rgba(255,255,255,1);
-    width:100% !important;
-    z-index: 1000;
-
-
-    opacity:0;
-    padding-bottom: 0.5em;
-    height:3em;
-    position: relative;
-    h1, h2, h3, h4, h5, h6 {
-      color: white;
-      letter-spacing: 0.4em;
-      text-align: center;
-      text-transform: uppercase;
-    }
-    p {
-      color: get-color('grey',1,1);
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 0.8em;
-      margin-bottom: 0em;
-    }
-    .items {
-      height:0em;
-      overflow: hidden;
-      width:100%;
-      background-color: get-color('azure',3,0.95);
-      justify-content: center;
-      padding:1em 0;
-      font-size: inherit;
-      padding:0 1em;
-      transition:height $transition-medium ease-out;
-      li {
-        margin-top: 1em;
-      }
-      a {
-        font-family: $font-headings;
-        color: white;
-      }
-      p {
-        margin-bottom: 0;
-      }
-      // Override styles for non-mobile menu display
-      @include media($menu-bp) {
-        height:auto;
-        display: flex;
-        background-color: rgba(255,255,255,1);
-        margin-top: 0;
-        padding:0.5em 0;
-        li {
-          margin-top: 0;
-          margin-left:2em;
-          margin-right:2em;
-        }
-        a {
-          color: black;
-        }
-      }
-    }
-
-    &.scrolled, &.active {
-      opacity: 1;
-      font-size: 100%;
-    }
-  }
-}
-
-*/
 /* line 1, ../../../src/sass/components/_hero.scss */
 .hero {
   position: relative;
