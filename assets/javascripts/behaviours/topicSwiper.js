@@ -79,15 +79,10 @@ var content = {
                 {
                     'title': "Managing water-related conflicts during times of water stress",
                     'stories': {
-                        'cambodia': {
-                            'title': "Something about something in Cambodia",
-                            'mainText': "Some text about stuff in Cambodia. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                            'hightlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-                        },
-                        'niger': {
-                            'title': "This is a cool story about Niger",
-                            'mainText': "Something about Niger. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                            'highlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+                        'cabo-verde': {
+                            'title': "Preventing water-related conflicts in Cabo Verde",
+                            'mainText': "Evidence from focus-group discussions held in Cabo Verde further suggests that conﬂicts around water use are frequent at household and community levels, especially in times of water stress. A young female representative from the Ministry of Rural Development20 stresses how tensions also arise between women and men farmers within the community. She explains that when the water level in the dam decreases, farmers using dam water for irrigation begin to fight. In other words, when water resources become scarce, male farmers often have the upper hand. The local official emphasized that a mechanism ensuring gender-equitable distribution of water was needed, but had not been treated as a priority. Complementing the existing small-scale investments in local water management, the UNDP intervention is making larger and more complex investments in water capture, storage and distribution, and investments targeting highly vulnerable sites.",
+                            'highlightText': "Complementing the existing small-scale investments in local water management, the UNDP intervention is making larger and more complex investments in water capture, storage and distribution, and investments targeting highly vulnerable sites."
                         }
                     }
                 },
@@ -95,29 +90,34 @@ var content = {
                     'title': "Gender differences in access to water for domestic use and irrigation",
                     'stories': {
                         'cambodia': {
-                            'title': "Something about something in Cambodia",
-                            'mainText': "Some text about stuff in Cambodia. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                            'hightlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+                            'title': "Enhancing water access for vulnerable households in Cambodia",
+                            'mainText': "Ms. Kin S. is a member of the Water-User Group in Svay Chek, Sambour District. She is a single woman who takes care of four people (a child of her own, two orphans and her mother). She doesn’t have any rice fields (the primary cash crop). However, after connecting to a water tank under the UNDP adaptation project, she has been able to grow cabbage, radish, onion, lemongrass, papaya and banana trees in her backyard. Her water bills have decreased considerably: she only has to pay 1000 Riels (US$0.25) to fill up her two 1000 m3 jars now, as opposed to 10,000 Riels (US$2.50) when she had to buy from local water sellers. Now she no longer needs to work as a daily agricultural labourer, thus making her life easier, as she can work in her garden while being present for the kids.",
+                            'highlightText': "After connecting to a water tank under the UNDP adaptation project, she has been able to grow cabbage, radish, onion, lemongrass, papaya and banana trees in her backyard."
                         },
-                        'niger': {
-                            'title': "This is a cool story about Niger",
-                            'mainText': "Something about Niger. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                            'highlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-                        }
+                        'cabo-verde': {
+                            'title': "Enhancing water access for vulnerable households in Cabo Verde",
+                            'mainText': "Ms. Filomena F. is a widow in Órgãos Pequeno settlement on Santiago Island and heads a nine-member household (herself, her daughter, her son and six grandchildren). The Canada-UNDP Climate Change Adaptation Facility project targets the most vulnerable households and the criteria include: large number of people, limited livelihood options and women-headed. Ms. Filomena fit the profile and an individual water tank was installed in front of her house. “I’m so happy with this. It’s a clean way of storing water for daily use, and there are fewer mosquitoes than when water is stored in containers around the house,” she says. She pays 570 Escudos (US$6.50) for 5 m3. When asked about the most significant change this water tank has made to her life, Ms. F. highlights two changes: i) not having to go down to the well in the middle of the night; and ii) no longer having to put up with social tensions around water in the dry season. She goes on to explain that the well is where villagers without a connection to the public network get water. It is located about 200 m down the hill.",
+                            'highlightText': "“I’m so happy with this. It’s a clean way of storing water for daily use, and there are fewer mosquitoes than when water is stored in containers around the house,”"
+                        },
+                        'sudan': {
+                            'title': "Innovative technologies to improve water access in Sudan",
+                            'mainText': "Before the project, sourcing water for domestic use was a very difficult task: it took a lot of time and huge efforts to get water. Sometimes conflicts with regard to access to water, erupted between people. “The skin on our hands would crack from constantly pulling up the rope to lift the water pail from the well. We spent so much time for collecting water whereas now, it’s so easy for us to get water by using the pump and the water pipe” (a woman from North Kordofan region). The UNDP adaptation projects have introduced a range of strategies and technologies (such as solar-powered water pumps), to strengthen access to water for drinking and other domestic uses. “Now I am no longer skipping my classes because the water problem is now solved”, recounts Badr Eldin, a nine-year-old boy from Siraj Alnour village in Gedarif.",
+                            'highlightText': "“The skin on our hands would crack from constantly pulling up the rope to lift the water pail from the well. We spent so much time for collecting water whereas now, it’s so easy for us to get water by using the pump and the water pipe”"
+                        },
+                        'sri-lanka': {
+                            'title': "Strengthening the resilience of smallholder farmers in the Dry Zone through an integrated approach to water management in Sri Lanka",
+                            'mainText': "The project in Sri Lanka developed and disseminated climate resilient agricultural practices with targeted enterprise development for women. The project was successful in establishing farmer-level seed nurseries with women producer groups to support adoption of climate-resilient crops. The observed impact was strengthened resilience of smallholder farmers, particularly women, in the Dry Zone through improved water management to enhance lives and livelihoods.",
+                            'highlightText': "The observed impact was strengthened resilience of smallholder farmers, particularly women, in the Dry Zone through improved water management to enhance lives and livelihoods."
+                        },
                     }
                 },
                 {
                     'title': "Promoting the participation and leadership of women in water management",
                     'stories': {
                         'cambodia': {
-                            'title': "Something about something in Cambodia",
-                            'mainText': "Some text about stuff in Cambodia. Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                            'hightlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim."
-                        },
-                        'niger': {
-                            'title': "This is a cool story about Niger",
-                            'mainText': "Something about Niger. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-                            'highlightText': "Quisque velit nisi, pretium ut lacinia in, elementum id enim."
+                            'title': "Encouraging women’s participation through water-user groups in Cambodia",
+                            'mainText': "The formation of groups to manage water resources to regulate use and avert social conflicts. Two categories of groups were formed: Farmer Water-User Committees (FWUCs) to manage water for irrigation purposes, and Water-User Groups (WUGs) to manage domestic water supply. Provincial-level staff responsible for implementing the project invested a significant amount of time and resources to oversee the formation of these groups at the village level, to build their capacity, and to ensure the effective participation of women in both groups (for more details, see Box 13 in the section on participation, decision-making and leadership). In addition to increasing local capacity for management and control over water resources, this approach also contributed to gender-responsive outcomes. Data collected from villages in Kratie Province suggest that the provision of water access combined with the creation of management groups led to significant positive changes in gender dynamics at the household level. These changes included reduced tensions between women and men, as they co-manage the WUGs, leading to shared decision-making at the household level. Women have also gained skills in water management and can take part in decisions regarding water use.",
+                            'highlightText': "In addition to increasing local capacity for management and control over water resources, this approach also contributed to gender-responsive outcomes."
                         }
                     }
                 }
